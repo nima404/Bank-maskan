@@ -1,0 +1,56 @@
+* {
+    user-select: none;
+}
+
+details {
+    background: #EFEFEF;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.summary_style {
+    background: #1D2939;
+    color: white;
+    position: relative;
+    direction: rtl;
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary_style::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #F25920;
+    width: 8px;
+    height: 64px;
+}
+
+.summary_style h4 {
+    position: relative;
+    right: 30px;
+    font-weight: bold;
+}
+
+.togglerIcon_style {
+    position: relative;
+    background: none;
+    border: none;
+    width: 5%;
+}
+
+details[open] summary .togglerIcon_style::after {
+    content: '🔽';
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}
+
+.togglerIcon_style::after {
+    content: '▶️';
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}
