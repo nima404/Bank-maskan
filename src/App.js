@@ -1,5 +1,5 @@
 import "./App.css";
-import { Zemaanet } from "./components/zemaanet";
+import { Zemaanet } from "./components/Zemaanet";
 
 function App() {
   return <Zemaanet />;

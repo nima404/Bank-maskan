@@ -1,10 +1,10 @@
-import styles from "/styles.module.css";
-import * as icons from "@ant-design/icons";
-export function BoxTitle({ title, icon }) {
+import styles from "./styles.module.css";
+import "./style.css";
+export function BoxTitle(props) {
   return (
-    <div>
-      {/* <{icons} /> */}
-      <h4>{title}</h4>
+    <div className={styles.BoxTitle_container}>
+      {props.icon}
+      <p className={styles.BoxTitle_Title}>{props.title}</p>
     </div>
   );
 }
