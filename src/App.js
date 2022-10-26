@@ -1,10 +1,8 @@
-import './App.css';
+import "./App.css";
+import { Zemaanet } from "./components/zemaanet";
 
 function App() {
-  return (
-    <>
-    </>
-  );
+  return <Zemaanet />;
 }
 
 export default App;
