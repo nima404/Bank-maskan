@@ -1,0 +1,19 @@
+.submit_style {
+    border: none;
+    background: #3A9BFB;
+    border-radius: 4px;
+    color: white;
+    width: 188px;
+    height: 36px;
+    margin: 0 5px 0 5px;
+}
+
+.cancle_style {
+    background: white;
+    border: 1px solid #3A9BFB;
+    border-radius: 4px;
+    color: #3A9BFB;
+    width: 84px;
+    height: 36px;
+    margin: 0 5px 0 5px;
+}
