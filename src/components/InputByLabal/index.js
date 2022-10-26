@@ -1,7 +1,6 @@
-import styles from "./styles.module.css";
-import { Button, Form, Input, Radio } from 'antd';
-import 'antd/dist/antd.css';
-
+import { Form, Input } from "antd";
+import "antd/dist/antd.css";
+import "./style.css";
 export function InputByLabel({ label }) {
   return (
     <Form.Item label={label}>
