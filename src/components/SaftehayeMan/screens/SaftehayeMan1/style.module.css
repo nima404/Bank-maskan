@@ -1,0 +1,14 @@
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 10px !important;
+}
+.labelDate{
+    font-weight: 500;
+}
+.Datail{
+    color: #fff;
+    margin-bottom: 10px;
+}

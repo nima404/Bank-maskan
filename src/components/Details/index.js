@@ -5,7 +5,7 @@ export const Details = ({ headerTitle, children }) => {
         <details>
             <summary className={styles.summary_style}>
                 <div>
-                    <h4>{headerTitle}</h4>
+                    <h4 className={styles.h4}>{headerTitle}</h4>
                 </div>
                 <div>
                     <p className={styles.togglerIcon_style}></p>

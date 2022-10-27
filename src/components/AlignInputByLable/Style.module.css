@@ -1,0 +1,9 @@
+.AlignInputbyLable{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.label{
+    padding-bottom: 10px;
+    font-weight: 500;
+}
