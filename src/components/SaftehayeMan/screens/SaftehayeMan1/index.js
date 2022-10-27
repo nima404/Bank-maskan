@@ -26,7 +26,9 @@ export default function SaftehayeMan1() {
                     جستجو
                 </Button>
             </InformationBox>
-            <Details headerTitle={"صادر کننده سفته"} className={Style.Datail}></Details>
+            <Details headerTitle={"صادر کننده سفته"} className={Style.Datail}>
+                <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
+            </Details>
             <Details headerTitle={"دارنده/دارنده جدید سفته"}></Details>
             <Details headerTitle={"ظهر نویسی سفته"}></Details>
             <Details headerTitle={"ضامن سفته"}></Details>

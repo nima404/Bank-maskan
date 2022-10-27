@@ -1,60 +1,65 @@
 * {
-    user-select: none;
+  user-select: none;
 }
 
 details {
-    background: #EFEFEF;
-    width: 90%;
-    margin: 0 auto;
+  background: #efefef;
+  width: 90%;
+  margin: 0 auto;
+  text-align: right;
 }
 
 .summary_style {
-    background: #1D2939;
-    color: #fff;
-    position: relative;
-    direction: rtl;
-    height: 64px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+  background: #1d2939;
+  color: #fff;
+  position: relative;
+  direction: rtl;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .summary_style::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #F25920;
-    width: 8px;
-    height: 64px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f25920;
+  width: 8px;
+  height: 64px;
 }
 
 .summary_style h4 {
-    position: relative;
-    right: 30px;
-    font-weight: bold;
+  position: relative;
+  right: 30px;
+  font-weight: bold;
 }
 
 .togglerIcon_style {
-    position: relative;
-    background: none;
-    border: none;
-    width: 5%;
+  position: relative;
+  background: none;
+  border: none;
+  width: 5%;
 }
 
 details[open] summary .togglerIcon_style::after {
-    content: '🔽';
-    font-size: 20px;
-    margin: 0 0 0 10px;
+  content: "🔽";
+  font-size: 20px;
+  margin: 0 0 0 10px;
 }
 
 .togglerIcon_style::after {
-    content: '▶️';
-    font-size: 20px;
-    margin: 0 0 0 10px;
+  content: "▶️";
+  font-size: 20px;
+  margin: 0 0 0 10px;
 }
-.h4{
-    color: #fff;
+.h4 {
+  color: #fff;
+}
+.InnerDetail {
+  font-size: 16px;
+  color: red;
 }
