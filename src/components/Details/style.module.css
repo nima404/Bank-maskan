@@ -1,12 +1,19 @@
-* {
+/* * {
   user-select: none;
-}
+} */
 
 details {
   background: #efefef;
   width: 90%;
   margin: 0 auto;
   text-align: right;
+  margin-bottom: 10px;
+  border-radius:10px ;
+  -webkit-border-radius:10px ;
+  -moz-border-radius:10px ;
+  -ms-border-radius:10px ;
+  -o-border-radius:10px ;
+  overflow: hidden;
 }
 
 .summary_style {
@@ -19,7 +26,6 @@ details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .summary_style::after {
@@ -42,19 +48,41 @@ details {
   position: relative;
   background: none;
   border: none;
-  width: 5%;
+  width: 10%;
 }
 
 details[open] summary .togglerIcon_style::after {
-  content: "🔽";
+  content: "^";
+  width: 30px;
+  height: 30px;
+  background: #F25920;
   font-size: 20px;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  display: block;
 }
 
 .togglerIcon_style::after {
-  content: "▶️";
+  content: "<";
   font-size: 20px;
-  margin: 0 0 0 10px;
+  width: 30px;
+  height: 30px;
+  background: #F25920;
+  font-size: 20px;
+  margin: 0 0 0 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  display: block;
+
 }
 .h4 {
   color: #fff;
