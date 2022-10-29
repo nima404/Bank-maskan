@@ -30,3 +30,13 @@
     font-weight: 700;
     margin-left: 10px;
 }
+.line{
+    border-left: 1px solid gray;
+    height: 30px;
+}
+.butto_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%;
+}

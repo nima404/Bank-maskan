@@ -1,19 +1,15 @@
 import React from "react";
 import style from "./Style.module.css";
-import { DownOutlined } from "@ant-design/icons";
-import { Button, Dropdown, Space } from "antd";
+import DropDown from "../SaftehayeMan/components/DropDown";
 
 const index = () => {
   return (
     <div className={style.container}>
-      <Dropdown overlay={"ali"}>
-        <Button>
-          <Space>
-            Button
-            <DownOutlined />
-          </Space>
-        </Button>
-      </Dropdown>
+      <div className={style.butto_box}>
+        <button></button>
+        <div className={style.line}></div>
+        <DropDown text={"انتخاب عملیات"}></DropDown>
+      </div>
       <div className={style.user}>
         <div className={style.users_column}>
           <div className={style.user_title}>
