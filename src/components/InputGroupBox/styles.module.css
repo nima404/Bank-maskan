@@ -1,6 +1,7 @@
 .InputGroupBox_container {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: inline-grid;
+  grid-template-columns: auto;
   gap: 10px;
-  margin-left: 60px;
+  margin-left: 0;
+  width: 50%;
 }

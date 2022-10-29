@@ -6,13 +6,16 @@ import { Checkbox } from "antd";
 import Style from "./style.module.css";
 import { Button } from "../../../Button";
 import { Details } from "../../../Details";
+import { NotificationText } from "../../../NotificationText";
 
 export default function SaftehayeMan1() {
   return (
     <>
-    <div>
-      <p>کاربر گرامی، در این صفحه می‌توانید جزئیات مربوط به سفته‌های خود را مشاهده کنید. همچنین می‌توانید با توجه به نقش خود نسبت به سفته و وضعیت آن، عملیات لازم را انجام دهید.</p>
-    </div>
+      <NotificationText type={"inform"}>
+        کاربر گرامی، در این صفحه می‌توانید جزئیات مربوط به سفته‌های خود را
+        مشاهده کنید. همچنین می‌توانید با توجه به نقش خود نسبت به سفته و وضعیت
+        آن، عملیات لازم را انجام دهید.
+      </NotificationText>
       <InformationBox>
         <AlignInputbyLable label={"نام گیرنده سفته"}></AlignInputbyLable>
         <AlignInputbyLable label={"شناسه یکتای سفته"}></AlignInputbyLable>

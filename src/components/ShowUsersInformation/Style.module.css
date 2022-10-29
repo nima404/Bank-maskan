@@ -1,0 +1,32 @@
+.container{
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.users_column{
+    border-right: 2px solid #F25920;
+    padding-right: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.user{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.user_title{
+    font-weight: 700;
+    margin-left: 10px;
+}

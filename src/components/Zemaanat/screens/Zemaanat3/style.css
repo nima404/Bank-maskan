@@ -1,4 +1,4 @@
-.submit_style {
+.ant-btn-primary {
   border: none;
   background: #3a9bfb;
   border-radius: 4px;
@@ -8,11 +8,11 @@
   margin: 0 8px 0 0;
   cursor: pointer;
 }
-.submit_style:disabled {
+.ant-btn-primarydisabled {
   cursor: inherit;
   background: #83c7ff;
 }
-.cancle_style {
+.ant-btn-secondary {
   background: white;
   border: 1px solid #3a9bfb;
   border-radius: 4px;
@@ -21,4 +21,10 @@
   height: 36px;
   margin: 0 8px 0 0;
   cursor: pointer;
+}
+.anticon svg {
+  color: white;
+}
+a .anticon svg {
+  color: #1890ff;
 }

@@ -1,0 +1,16 @@
+.Zemaanet3 {
+  width: 75%;
+  margin: 3px auto;
+}
+.Zemaanet3__body {
+  margin-top: 23px;
+  position: relative;
+}
+.Zemaanet3__body__links {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.sign_guid {
+  font-size: 16px;
+}

@@ -1,9 +1,9 @@
 import "./App.css";
-import SaftehayeMan1 from "./components/SaftehayeMan";
+import SaftehayeMan from "./components/SaftehayeMan";
 import { Zemaanat } from "./components/Zemaanat";
 
 function App() {
-  return <SaftehayeMan1 />;
+  return <SaftehayeMan />;
 }
 
 export default App;
