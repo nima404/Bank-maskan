@@ -1,6 +1,6 @@
 import React from "react";
 import { Details } from "../../../Details";
-import ShowUserInfromation from "../../../ShowUsersInformation";
+import ShowUserInfromation from "../../components/ShowUsersInformation";
 
 const index = () => {
   return (
