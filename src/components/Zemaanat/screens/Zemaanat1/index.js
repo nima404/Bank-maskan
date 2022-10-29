@@ -5,6 +5,7 @@ import { InputByLabel } from "../../../InputByLabal";
 import { InputGroupBox } from "../../../InputGroupBox";
 import { SubmitButtonBox } from "../../../SubmitButtonBox";
 import { Button } from "../../../Button";
+// ESTELAAM SAFTE
 export function Zemaanat1() {
   return (
     <div className={styles.Zemaanat1_container}>
@@ -12,7 +13,9 @@ export function Zemaanat1() {
         <InputGroupBox>
           <InputByLabel label={"شماره/ شناسه ملی صادر کننده"} />
           <InputByLabel label={"کد ثنای صادر کننده"} />
-          <InputByLabel label={"شناسه یکتای صادر کننده"} />
+        </InputGroupBox>
+        <InputGroupBox>
+          <InputByLabel label={"شناسه یکتای سفته"} />
         </InputGroupBox>
       </InformationBox>
       <SubmitButtonBox>
