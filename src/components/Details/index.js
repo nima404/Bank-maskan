@@ -11,7 +11,9 @@ export const Details = ({ headerTitle, children }) => {
                     <p className={styles.togglerIcon_style}></p>
                 </div>
             </summary>
-            {children}
+            <div className={styles.details_children}>
+                {children}
+            </div>
         </details>
     )
 }

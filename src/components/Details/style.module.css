@@ -4,11 +4,17 @@
 
 details {
     background: #EFEFEF;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.details_children {
+    padding: 10px;
 }
 
 .summary_style {
+    border-radius: 4px;
     background: #1D2939;
     color: white;
     position: relative;
@@ -34,6 +40,7 @@ details {
     position: relative;
     right: 30px;
     font-weight: bold;
+    color: white;
 }
 
 .togglerIcon_style {
