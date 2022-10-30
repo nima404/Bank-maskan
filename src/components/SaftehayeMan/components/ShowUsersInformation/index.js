@@ -2,7 +2,9 @@ import React from "react";
 import style from "./Style.module.css";
 import DropDown from "../DropDown";
 import UserLine from "../UsersLine";
-import DetailInformation from "../DetailInformation"
+import DetailInformation from "../DetailInformation";
+import EmptyText from "../EmptyText"
+
 const index = () => {
   return (
     <details className={style.details}>
@@ -38,6 +40,16 @@ const index = () => {
         <div>
           <UserLine text={"اطلاعات صادرکننده"}></UserLine>
           <DetailInformation></DetailInformation>
+        </div>
+        <div>
+          <UserLine text={"اطلاعات دریافت‌کننده"}></UserLine>
+          <DetailInformation></DetailInformation>
+        </div>
+        <div>
+          <UserLine text={"اطلاعات ظهرنویسان"}></UserLine>
+          <DetailInformation></DetailInformation>
+          //if we dont have information for this part we would use this component
+          {/* <EmptyText text={"برای این سفته ظهرنویسی انجام نشده است."}></EmptyText> */}
         </div>
       </div>
     </details>
