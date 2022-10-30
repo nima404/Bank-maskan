@@ -4,6 +4,7 @@ import DropDown from "../DropDown";
 import UserLine from "../UsersLine";
 import DetailInformation from "../DetailInformation";
 import EmptyText from "../EmptyText"
+import RectagleUserInformation from "../RectangleUserInformation"
 
 const index = () => {
   return (
@@ -47,8 +48,8 @@ const index = () => {
         </div>
         <div>
           <UserLine text={"اطلاعات ظهرنویسان"}></UserLine>
-          <DetailInformation></DetailInformation>
-          //if we dont have information for this part we would use this component
+          <RectagleUserInformation></RectagleUserInformation>
+          {/* if we dont have information for this part we would use this component */}
           {/* <EmptyText text={"برای این سفته ظهرنویسی انجام نشده است."}></EmptyText> */}
         </div>
       </div>

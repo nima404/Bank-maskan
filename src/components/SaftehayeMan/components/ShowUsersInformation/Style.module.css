@@ -95,6 +95,7 @@
     margin: 0;
     border-radius: 0;
     width: 100%;
+    padding: 10px;
 }
 .button_box{
     display: flex;

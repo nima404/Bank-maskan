@@ -1,0 +1,27 @@
+.container{
+    background-color: #fff;
+    border: 1px solid #3A9BFB;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.information{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.title{
+    font-weight: bold;
+    margin-left: 20px;
+}
+.users{
+    margin-left: 20px;
+}
