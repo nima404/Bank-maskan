@@ -10,7 +10,17 @@
   position: absolute;
   top: 10px;
   left: 10px;
+  display: flex;
+  flex-direction: column;
+  direction: initial;
 }
 .sign_guid {
   font-size: 16px;
+  line-height: 60px;
+  text-decoration: underline;
+}
+.Zemaanet3_links {
+  font-size: 12px;
+  line-height: 28px;
+  text-decoration: underline;
 }

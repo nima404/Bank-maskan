@@ -13,6 +13,6 @@
 .ant-input:disabled {
   cursor: inherit;
 }
-.ant-input[type="text"] {
+.input-price .ant-input {
   direction: ltr;
 }
