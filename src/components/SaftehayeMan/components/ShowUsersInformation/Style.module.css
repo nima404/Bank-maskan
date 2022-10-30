@@ -1,4 +1,4 @@
-.container{
+/* .container{
     background-color: #fff;
     width: 90%;
     margin: auto;
@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 .users_column{
     border-right: 2px solid #F25920;
     padding-right: 20px;
@@ -34,58 +34,69 @@
     border-left: 1px solid gray;
     height: 30px;
 }
-.butto_box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 15%;
-    margin-left: 15px;
-}
 .summary{
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    overflow: visible;
-    position: relative;
     direction: rtl;
 }
 .details{
     margin-top: 15px;
 }
-details[open] .summary::after {
+
+/* .togle_button{
+    position: relative;
+} */
+
+.details[open] .summary .button_box .togle_button::after{
     content: "^";
-    width: 45px;
-    height: 45px;
-    background: #3A9BFB;
-    font-size: 20px;
-    margin: 0 0 0 15px;
-    text-align: center;
+    background-color: #fff;
+    color: #3A9BFB;
+    border: 1px solid #3A9BFB;
     display: block;
-    position: absolute;
-    left: 0;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    color: #fff;
+    margin-right: 10px;
 }
-  .summary::after {
+.togle_button::after{
     content: "<";
-    font-size: 20px;
-    width: 45px;
-    height: 45px;
-    background: #3A9BFB;
-    font-size: 20px;
-    margin: 0 0 0 15px;
-    text-align: center;
-    display: block;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    background-color: #3A9BFB;
+    border: none;
     color: #fff;
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    margin-right: 10px;
+}
+.container{
+    background-color: #fff;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+}
+.button_box{
+    display: flex;
+    align-items:flex-start;
 }
