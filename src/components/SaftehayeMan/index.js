@@ -5,7 +5,7 @@ export default function SaftehayeMan() {
     return(
         <div>
             {/* <SaftehayeMan1></SaftehayeMan1> */}
-            <SaftehayeMan2></SaftehayeMan2>
+            {/* <SaftehayeMan2></SaftehayeMan2> */}
         </div>
     )
 }
