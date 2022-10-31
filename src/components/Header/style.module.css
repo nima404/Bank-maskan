@@ -1,0 +1,17 @@
+.header {
+  position: absolute;
+  width: 1720px;
+  height: 50px;
+  right: 200px;
+  top: 0px;
+  background: #eeeeee;
+}
+.header_text {
+  color: #666666;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  width: 100px;
+  justify-content: space-around;
+}

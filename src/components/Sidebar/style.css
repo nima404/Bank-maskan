@@ -1,0 +1,42 @@
+body {
+  direction: rtl;
+}
+.logo {
+  display: flex;
+  height: 60px;
+  margin: auto;
+  border-bottom: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+}
+.logo-text {
+  color: #fff;
+}
+.sidebar {
+  position: absolute !important;
+  width: 200px;
+  height: 1920px;
+  right: 0px;
+  top: 0px;
+
+  background: #1d2939;
+}
+.ant-menu {
+  padding: 0px;
+  margin-top: 0px;
+}
+.ant-menu-item {
+  color: #fff;
+  list-style-type: none;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+  font-size: 13px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.ant-menu-item-selected {
+  background: #f4ab4d;
+}

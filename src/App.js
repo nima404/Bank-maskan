@@ -1,8 +1,14 @@
 import "./App.css";
-import { Zemaanat } from "./components/Zemaanat";
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
 
 function App() {
-  return <Zemaanat />;
+  return (
+    <>
+      <Header />
+      <Sidebar />
+    </>
+  );
 }
 
 export default App;
