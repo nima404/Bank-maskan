@@ -13,6 +13,9 @@
 .ant-input:disabled {
   cursor: inherit;
 }
-.ant-input[type="text"] {
+.ant-input[type="number"] {
+  direction: ltr;
+}
+.ant-input[type="password"] {
   direction: ltr;
 }
