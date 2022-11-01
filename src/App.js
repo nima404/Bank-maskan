@@ -1,9 +1,14 @@
 import "./App.css";
-import SaftehayeMan from "./components/SaftehayeMan";
-import { Zemaanat } from "./components/Zemaanat";
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
 
 function App() {
-  return <SaftehayeMan />;
+  return (
+    <>
+      <Header />
+      <Sidebar />
+    </>
+  );
 }
 
 export default App;
