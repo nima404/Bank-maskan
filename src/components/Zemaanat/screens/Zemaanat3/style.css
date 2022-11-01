@@ -28,3 +28,10 @@
 a .anticon svg {
   color: #1890ff;
 }
+.ant-modal-content {
+  color: #3a9bfb;
+  border: 1px solid #3a9bfb;
+  border-radius: 5px;
+  width: 360px;
+  direction: rtl;
+}

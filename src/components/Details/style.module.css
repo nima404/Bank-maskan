@@ -8,11 +8,11 @@ details {
   margin: 0 auto;
   text-align: right;
   margin-bottom: 10px;
-  border-radius:10px ;
-  -webkit-border-radius:10px ;
-  -moz-border-radius:10px ;
-  -ms-border-radius:10px ;
-  -o-border-radius:10px ;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   overflow: hidden;
 }
 
@@ -42,6 +42,7 @@ details {
   position: relative;
   right: 30px;
   font-weight: bold;
+  color: white;
 }
 
 .togglerIcon_style {
@@ -55,7 +56,7 @@ details[open] summary .togglerIcon_style::after {
   content: "^";
   width: 30px;
   height: 30px;
-  background: #F25920;
+  background: #f25920;
   font-size: 20px;
   margin: 0 0 0 15px;
   border-radius: 50%;
@@ -72,7 +73,7 @@ details[open] summary .togglerIcon_style::after {
   font-size: 20px;
   width: 30px;
   height: 30px;
-  background: #F25920;
+  background: #f25920;
   font-size: 20px;
   margin: 0 0 0 15px;
   border-radius: 50%;

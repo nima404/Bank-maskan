@@ -1,0 +1,17 @@
+.expire-date-seperator {
+  position: absolute;
+  width: 30px;
+  height: 0px;
+  left: 64.5%;
+  border: 1px solid #c8c8c8;
+  transform: rotate(-72.65deg) translate(-50%, -50%);
+}
+.ant-btn-primary:disabled {
+  cursor: inherit;
+  background: #83c7ff;
+  color: white;
+}
+.ant-btn-primary:disabled:hover {
+  background: #83c7ff;
+  color: white;
+}

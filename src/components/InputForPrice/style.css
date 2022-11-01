@@ -13,9 +13,17 @@
 .ant-input:disabled {
   cursor: inherit;
 }
-.ant-input[type="number"] {
+.input-price .ant-input {
   direction: ltr;
+  padding-left: 35px !important;
 }
-.ant-input[type="password"] {
-  direction: ltr;
+.input-price {
+  position: relative;
+}
+.currency {
+  position: absolute;
+  left: 4px;
+  z-index: 10;
+  top: 3px;
+  color: #9a9a9a;
 }
