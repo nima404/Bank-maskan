@@ -1,0 +1,9 @@
+.ant-form-item-label > label::after {
+  content: "" !important;
+}
+.ant-input {
+  width: 278px;
+}
+.ant-form-item-control-input-content{
+  text-align: left;
+}

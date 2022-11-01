@@ -1,0 +1,26 @@
+.div_img {
+    margin-right: 60px;
+    color: #ABABAB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img_h4{
+    color: #ABABAB;
+    margin: 5px 0;
+}
+.img_span{
+    font-size: 10px;
+}
+.div_icon {
+    margin: 0;
+}
+
+.container {
+    user-select: none;
+}
+.style_cancle_style__ZC3cN{
+    padding: 0;
+}
+

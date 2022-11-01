@@ -1,0 +1,23 @@
+.BoxTitle_container_N .anticon svg {
+    color: #1890ff !important;
+  }
+  .BoxTitle_container_N {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 30px;
+  }
+  .BoxTitle_Title_N {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin: 0 5px ;
+  }
+  .BoxTitle_Title_N .anticon{
+    margin: 0 5px;
+  }
+  

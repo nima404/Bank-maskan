@@ -1,8 +1,16 @@
 import "./App.css";
-import { Zemaanat } from "./components/Zemaanat";
+import { Sodoor1 } from "./components/sodoor/screens/sodoor1";
+import Sodoor4 from "./components/sodoor/screens/sodoor4";
+
 
 function App() {
-  return <Zemaanat />;
+  return (
+    <div>
+      <Sodoor1 />
+      <Sodoor4 />
+
+    </div>
+  )
 }
 
 export default App;

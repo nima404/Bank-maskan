@@ -1,0 +1,9 @@
+.InputGroupBox_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 10px;
+  padding: 0;
+  width: 40%;
+}

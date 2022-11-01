@@ -1,0 +1,13 @@
+.Information_container_N {
+    margin: 15px 0;
+    direction: rtl;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+  }
