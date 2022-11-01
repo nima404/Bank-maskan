@@ -1,0 +1,14 @@
+.line{
+    border-bottom: 1px solid rgb(151, 151, 151);
+    width: 80%;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    direction: ltr;
+}
+.text{
+    color: #3A9BFB;
+    font-weight: bold;
+}

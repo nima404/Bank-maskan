@@ -7,8 +7,8 @@ export function Zemaanat(params) {
   return (
     <div className={styles.Zemaanat_container}>
       {/* <Zemaanat1 /> */}
-      <Zemanat2 />
-      {/* <Zemaanet3 /> */}
+      {/* <Zemanat2 /> */}
+      <Zemaanet3 />
     </div>
   );
 }

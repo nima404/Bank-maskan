@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 200px;
+}
+.title{
+    font-weight: bold;
+}

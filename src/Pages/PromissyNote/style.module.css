@@ -1,0 +1,9 @@
+.card_style {
+  box-sizing: border-box;
+  position: absolute;
+  width: 772px;
+  height: 240px;
+  top: 80px;
+  background: #f2f4f7;
+  border: 1px solid #edeff1;
+}
