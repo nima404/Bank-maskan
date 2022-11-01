@@ -17,12 +17,17 @@ export const Zemanat2 = () => {
     const [trackingCode, setTrackingCode] = useState("654978")
     const [price, setPrice] = useState("")
 
+    const [openModal, setOpenModal] = useState(false)
+
     const stepListObject = [
         { name: "Test1", status: "process" },
         { name: "Test2", status: "wait" },
         { name: "Test3", status: "wait" },
         { name: "Test4", status: "wait" },
     ]
+    function handleOpenModal() {
+        VerifyModal({ title: "ssd", Content: "ds", handleOnOk: () => console.log("ggg") })
+    }
     return (
         <div className={styles.Zemanat3_container}>
 
@@ -116,13 +121,12 @@ export const Zemanat2 = () => {
             </InformationBox>
 
             <SubmitButtonBox>
-                <Button mode={"submit"} text="ارسال درخواست ضمانت نامه" />
+                <Button mode={"submit"} handleClick={handleOpenModal} text="ارسال درخواست ضمانت نامه" />
                 <Button mode={"cancle"} text="مرحله قبل" />
             </SubmitButtonBox>
 
-            <VerifyModal Title={"testTitle"} />
 
-            <br />
+            < br />
         </div>
     )
 }

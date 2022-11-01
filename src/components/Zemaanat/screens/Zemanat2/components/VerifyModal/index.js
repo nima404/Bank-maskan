@@ -1,39 +1,46 @@
 import { ExclamationCircleOutlined } from '@ant-design/icons';
 import { Button, Modal, Space } from 'antd';
-import {
-    LoadingOutlined,
-} from '@ant-design/icons';
 import { useState } from 'react';
 
-export const VerifyModal = ({ Title, Content }) => {
-    const { confirm } = Modal;
-    const [confirmLoading, setConfirmLoading] = useState(false);
-    const [open, setOpen] = useState(false);
-    const showConfirm = () => {
-        confirm({
-            title: Title,
-            icon: <ExclamationCircleOutlined />,
-            content: Content,
-            onOk() {
-                setConfirmLoading(true);
-                setTimeout(() => {
-                    setOpen(false);
-                    setConfirmLoading(false);
-                }, 2000);
-            },
-            onCancel() {
-            },
+export const VerifyModal = ({ Title, Content, mode, handleOnOk }) => {
+    mode === "justMain" ? Modal.confirm({
 
-            okText: "jj",
-            cancelText: "ویرایش",
-            style: { textAlign: 'right' },
-        });
-    };
-    return (
-        <div>
-            <Space wrap>
-                <Button onClick={showConfirm}>Modal</Button>
-            </Space>
-        </div>
-    )
+        title: Title,
+        icon: <ExclamationCircleOutlined />,
+        content: Content,
+        onOk: () => {
+            handleOnOk()
+            return new Promise((resolve, reject) => {
+                setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+            }).catch(() => console.log('Oops errors!'));
+        },
+        onCancel: () => {
+            handleOnOk()
+        },
+        okButtonProps: {
+            style: {
+                display: "none",
+            }
+        },
+        cancelButtonProps: {
+            style: {
+                display: "none",
+            }
+        }
+    }) : Modal.confirm({
+
+        title: Title,
+        icon: <ExclamationCircleOutlined />,
+        content: Content,
+        onOk: () => {
+            handleOnOk()
+            return new Promise((resolve, reject) => {
+                setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
+            }).catch(() => console.log('Oops errors!'));
+        },
+        onCancel: () => {
+            handleOnOk()
+        }
+    })
+
 }
