@@ -1,3 +1,4 @@
+import { Steps, Stepss } from "../Steps";
 import { Zemaanat1 } from "./screens/Zemaanat1";
 import { Zemaanet3 } from "./screens/Zemaanat3";
 import { Zemanat2 } from "./screens/Zemanat2";

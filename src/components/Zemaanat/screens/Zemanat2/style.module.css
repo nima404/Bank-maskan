@@ -9,3 +9,10 @@
     justify-content: space-around;
     align-items: flex-start;
 }
+
+.persian_price {
+    color: #9A9A9A;
+    font-size: 13px;
+    width: 30%;
+    margin: 0 auto;
+}
