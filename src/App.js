@@ -1,12 +1,10 @@
 import "./App.css";
-import { Header } from "./components/Header";
-import { Sidebar } from "./components/Sidebar";
+import { DeleteRequest } from "./components/DeleteRequest";
 
 function App() {
   return (
     <>
-      <Header />
-      <Sidebar />
+      <DeleteRequest />
     </>
   );
 }
