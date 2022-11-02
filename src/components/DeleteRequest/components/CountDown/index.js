@@ -6,7 +6,7 @@ import { Maybe } from "../../../Maybe";
 import "./style.css";
 const { Countdown } = Statistic;
 const deadline = Date.now() + 1000 * 60; // Moment is also OK
-export const CownDown = () => {
+export const CountDown = () => {
   const [resetCownt, setResentCownt] = useState(true);
   const [time, setTime] = useState(deadline);
   const onFinish = () => {

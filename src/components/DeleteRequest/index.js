@@ -10,7 +10,6 @@ import { SubmitButtonBox } from "./../SubmitButtonBox/index";
 import { useState } from "react";
 import { VerifyModal } from "./components/VerifyModal";
 import { Button } from "antd";
-import { CownDown } from "./components/CowntDown";
 export function DeleteRequest() {
   const [showModal, setShowModal] = useState(false);
   const [code, setCode] = useState("12345");

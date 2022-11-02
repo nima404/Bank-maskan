@@ -1,12 +1,11 @@
 import { Maybe } from "../../../Maybe";
 import { Modal } from "antd";
 import style from "./style.css";
-import { CheckSquareOutlined } from "@ant-design/icons";
 import { TitleModal } from "./TitleModal";
 import { NotificationText } from "../../../NotificationText";
 import { InputByLabel } from "../../../InputByLabal";
 import { InputGroupBox } from "./../../../InputGroupBox/index";
-import { CownDown } from "./../CowntDown/index";
+import { CountDown } from "./../CountDown/index";
 export function VerifyModal({ showModal, handleCancel, Title, code }) {
   console.log(showModal);
   return (
@@ -25,7 +24,7 @@ export function VerifyModal({ showModal, handleCancel, Title, code }) {
       <h4>کدپیگیری:{code}</h4>
 
       <InputByLabel label={"کد تایید"} />
-      <CownDown />
+      <CountDown />
     </Modal>
   );
 }
