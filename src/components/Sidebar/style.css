@@ -1,6 +1,3 @@
-body {
-  direction: rtl;
-}
 .logo {
   display: flex;
   height: 60px;
@@ -11,10 +8,14 @@ body {
 }
 .logo-text {
   color: #fff;
+  margin-right: 9px;
+}
+.logo-text p {
+  margin-bottom: 2px;
 }
 .sidebar {
-  position: absolute !important;
-  width: 200px;
+  position: relative !important;
+  width: 15%;
   height: 1920px;
   right: 0px;
   top: 0px;
@@ -39,4 +40,12 @@ body {
 }
 .ant-menu-item-selected {
   background: #f4ab4d;
+}
+.ant-menu-inline > .ant-menu-item {
+  height: 70px !important;
+  margin: 0 auto !important;
+  padding-top: 10px !important;
+}
+.ant-menu-title-content {
+  margin-left: 0 !important;
 }

@@ -1,6 +1,9 @@
 .ant-form-item-label > label::after {
   content: "" !important;
 }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .ant-input {
   width: 278px;
 }

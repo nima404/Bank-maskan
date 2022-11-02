@@ -13,6 +13,11 @@ export function InputByLabel({
   value,
   onChange,
 }) {
+  function handleOnKeyPress(event) {
+    if ((!/[0-9]/.test(event.key) && type === "number") || event.key === " ") {
+      event.preventDefault();
+    }
+  }
   return (
     <Form.Item label={label}>
       {mode === "dropDown" ? (
@@ -21,6 +26,7 @@ export function InputByLabel({
         </Space>
       ) : (
         <Input
+          onKeyPress={(event) => handleOnKeyPress(event)}
           value={value}
           onChange={(e) => onChange(e.currentTarget.value)}
           disabled={disabled}
