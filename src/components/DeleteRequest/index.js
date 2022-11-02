@@ -6,9 +6,21 @@ import { InputByLabel } from "./../InputByLabal/index";
 import { InputGroupBox } from "./../InputGroupBox/index";
 import { SubmitButtonBox } from "./../SubmitButtonBox/index";
 
-import { Button } from "./components/Button";
-import { VerifyModal } from "../Zemaanat/screens/Zemanat2/components/VerifyModal";
+// import { Button } from "./components/Button";
+import { useState } from "react";
+import { VerifyModal } from "./components/VerifyModal";
+import { Button } from "antd";
+import { CownDown } from "./components/CowntDown";
 export function DeleteRequest() {
+  const [showModal, setShowModal] = useState(false);
+  const [code, setCode] = useState("12345");
+  console.log(showModal);
+  const handleClick = () => {
+    setShowModal(true);
+  };
+  const handleCancel = () => {
+    setShowModal(false);
+  };
   return (
     <div className={styles.delete_container}>
       <NotificationText type={"inform"}>
@@ -22,14 +34,17 @@ export function DeleteRequest() {
         </InputGroupBox>
       </InformationBox>
       <SubmitButtonBox>
-        <Button text={"تایید"} title={"تایید"} mode={"submit"} />
-        <Button
-          text={"بازگشت"}
-          title={"بازگشت"}
-          mode={"cancel"}
-          disabled={false}
-        />
+        <Button onClick={handleClick} className={styles.submit_style}>
+          تایید
+        </Button>
+        <Button className={styles.cancle_style}>بازگشت</Button>
       </SubmitButtonBox>
+      <VerifyModal
+        showModal={showModal}
+        handleCancel={handleCancel}
+        Title={"کد تایید"}
+        code={code}
+      />
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.timer-btn {
+  position: absolute;
+  width: 110px;
+  height: 32px;
+  left: 203px;
+  top: 131px;
+  color: #3a9bfb;
+  background: #d3e9ff;
+  border-radius: 2px;
+}
+.ant-statistic-content {
+  font-size: 14px;
+
+  color: #3a9bfb;
+}

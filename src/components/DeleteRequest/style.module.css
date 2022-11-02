@@ -3,3 +3,28 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+.submit_style {
+  border: none !important;
+  background: #3a9bfb !important;
+  border-radius: 4px !important;
+  color: white !important;
+  width: 84px;
+  height: 36px;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+}
+.submit_style:disabled {
+  cursor: inherit;
+  background: #83c7ff;
+}
+.cancle_style {
+  background: #d3e9ff !important;
+
+  border: none !important;
+  border-radius: 4px !important;
+  color: #3a9bfb !important;
+  width: 84px;
+  height: 36px;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+}
