@@ -1,12 +1,16 @@
-.submit_style {
+.submit_style,
+.submit_style:hover {
   border: none;
   background: #3a9bfb;
   border-radius: 4px;
-  color: white;
+  color: white !important;
   width: 188px;
   height: 36px;
   margin: 0 8px 0 0;
   cursor: pointer;
+}
+.submit_style:hover {
+  background: #83c7ff !important;
 }
 .submit_style:disabled {
   cursor: inherit;

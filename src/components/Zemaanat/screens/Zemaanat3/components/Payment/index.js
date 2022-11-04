@@ -1,7 +1,7 @@
 import { FileTextOutlined, UndoOutlined } from "@ant-design/icons";
-import { Button } from "antd";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Button } from "../../../../../Button";
 import { InformationBox } from "../../../../../InformationBox";
 import { InputByLabel } from "../../../../../InputByLabal";
 import { InputForPrice } from "../../../../../InputForPrice";

@@ -1,11 +1,11 @@
 .Zemanat3_container {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 20px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .input_section {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }

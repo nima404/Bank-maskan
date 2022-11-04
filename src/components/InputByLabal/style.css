@@ -3,7 +3,9 @@
 }
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
+
 .ant-input {
   width: 278px;
 }

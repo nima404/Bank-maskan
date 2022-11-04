@@ -3,9 +3,10 @@ import {
   QuestionCircleFilled,
   UndoOutlined,
 } from "@ant-design/icons";
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Button } from "../../../../../Button";
 import { InformationBox } from "../../../../../InformationBox";
 import { InputByLabel } from "../../../../../InputByLabal";
 import { InputForPrice } from "../../../../../InputForPrice";

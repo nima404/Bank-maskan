@@ -8,7 +8,7 @@
   margin: 0 8px 0 0;
   cursor: pointer;
 }
-.ant-btn-primarydisabled {
+.ant-btn-primary:disabled {
   cursor: inherit;
   background: #83c7ff;
 }

@@ -16,6 +16,8 @@ export function InputByLabel({
   function handleOnKeyPress(event) {
     if ((!/[0-9]/.test(event.key) && type === "number") || event.key === " ") {
       event.preventDefault();
+    } else if (event.currentTarget.value.length === maxLength) {
+      event.preventDefault();
     }
   }
   return (

@@ -12,6 +12,7 @@ export function Main() {
       <Card
         className={styles.card_style}
         title={"استعلام سفته"}
+        path={"/estelam"}
         description={"توضیحات استعلام"}
       />
       <Card

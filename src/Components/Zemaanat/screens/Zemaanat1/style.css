@@ -1,0 +1,16 @@
+.ant-modal-confirm-body {
+  direction: rtl;
+}
+.ant-modal-confirm .ant-modal-confirm-btns {
+  text-align: left !important;
+}
+.ant-modal-confirm-body > .anticon {
+  float: right !important;
+}
+.ant-modal-confirm-title {
+  padding-right: 5px;
+}
+.ant-modal-confirm-content {
+  margin-right: 35px !important;
+  margin-left: 0 !important;
+}

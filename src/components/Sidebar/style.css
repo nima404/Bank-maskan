@@ -19,7 +19,7 @@
   height: 1920px;
   right: 0px;
   top: 0px;
-
+  direction: rtl;
   background: #1d2939;
 }
 .ant-menu {
