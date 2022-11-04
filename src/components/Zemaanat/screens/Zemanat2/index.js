@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "../../../Button"
 import { Details } from "../../../Details"
 import { InformationBox } from "../../../InformationBox"
@@ -9,9 +9,12 @@ import { SubmitButtonBox } from "../../../SubmitButtonBox"
 import { VerifyModal } from "./components/VerifyModal"
 import styles from "./style.module.css";
 import { numberToWords } from "@persian-tools/persian-tools";
+import axios from "axios";
 
 import { UserOutlined, IdcardOutlined, UserDeleteOutlined } from '@ant-design/icons';
 import { StepsBox } from "../../../Steps"
+import { getData } from "../../../../store/safteData/safteData.action"
+import { useDispatch, useSelector } from "react-redux"
 
 export const Zemanat2 = () => {
     const [trackingCode, setTrackingCode] = useState("654978")
@@ -19,12 +22,28 @@ export const Zemanat2 = () => {
 
     const [openModal, setOpenModal] = useState(false)
 
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        // ?nationalNumber=0481301302
+        axios.get(
+            'https://6358f6efff3d7bddb99528fa.mockapi.io/api/safteData/saftehDatas'
+        )
+            .then((res) => {
+                dispatch(getData(res.data))
+            })
+            .catch((e) => console.log("e: ", e))
+    }, [])
+
+    const states = useSelector(state => state.safteData.safteData)
+
     const stepListObject = [
         { name: "Test1", status: "process" },
         { name: "Test2", status: "wait" },
         { name: "Test3", status: "wait" },
         { name: "Test4", status: "wait" },
     ]
+
     function handleOpenModal() {
         VerifyModal({ title: "ssd", Content: "ds", handleOnOk: () => console.log("ggg") })
     }

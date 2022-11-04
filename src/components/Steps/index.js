@@ -1,4 +1,6 @@
 import { LoadingOutlined, SmileOutlined, SolutionOutlined, UserOutlined } from '@ant-design/icons';
+import styles from "./style.module.css"
+
 import { Steps } from 'antd';
 export const StepsBox = ({ stepsList }) => {
     const { Step } = Steps;
@@ -7,10 +9,10 @@ export const StepsBox = ({ stepsList }) => {
     }
 
     return (
-        <Steps>
+        <Steps className={styles.dir}>
             {
                 stepsList.map((node, index) => {
-                    return <Step status={node.status} title={node.name} icon={node.icon} key={`i${index}_${node.name}`} style={{margin:"30px 0"}}/>
+                    return <Step status={node.status} title={node.name} icon={node.icon} key={`i${index}_${node.name}`} style={{ margin: "30px 0" }} />
                 })
             }
         </Steps>
