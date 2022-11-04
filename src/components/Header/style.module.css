@@ -1,0 +1,32 @@
+.header {
+  /* position: absolute; */
+  width: 100%;
+  height: 60px;
+  right: 200px;
+  top: 0px;
+  background: #eeeeee;
+  direction: rtl;
+}
+.header_text {
+  color: #666666;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  width: 200px;
+  height: 100%;
+  gap: 5px;
+}
+.header_text p {
+  margin-bottom: 0;
+}
+.header_title {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.header_icon {
+  width: 22px;
+  border-radius: 50%;
+  border: 1px solid black;
+}

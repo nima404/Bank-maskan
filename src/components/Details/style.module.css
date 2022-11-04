@@ -1,63 +1,93 @@
 * {
-    user-select: none;
+  user-select: none;
 }
 
 details {
-    background: #EFEFEF;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.details_children {
-    padding: 10px;
+  background: #efefef;
+  width: 90%;
+  margin: 0 auto;
+  text-align: right;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
 }
 
 .summary_style {
-    border-radius: 4px;
-    background: #1D2939;
-    color: white;
-    position: relative;
-    direction: rtl;
-    height: 64px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #1d2939;
+  color: #fff;
+  position: relative;
+  direction: rtl;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .summary_style::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #F25920;
-    width: 8px;
-    height: 64px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f25920;
+  width: 8px;
+  height: 64px;
 }
 
 .summary_style h4 {
-    position: relative;
-    right: 30px;
-    font-weight: bold;
-    color: white;
+  position: relative;
+  right: 30px;
+  font-weight: bold;
+  color: white;
 }
 
 .togglerIcon_style {
-    position: relative;
-    background: none;
-    border: none;
-    width: 5%;
+  position: relative;
+  background: none;
+  border: none;
+  width: 10%;
 }
 
 details[open] summary .togglerIcon_style::after {
-    content: '🔽';
-    font-size: 20px;
-    margin: 0 0 0 10px;
+  content: "^";
+  width: 30px;
+  height: 30px;
+  background: #f25920;
+  font-size: 20px;
+  margin: 0 0 0 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  display: block;
 }
 
 .togglerIcon_style::after {
-    content: '▶️';
-    font-size: 20px;
-    margin: 0 0 0 10px;
+  content: "<";
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background: #f25920;
+  font-size: 20px;
+  margin: 0 0 0 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+  display: block;
+}
+.h4 {
+  color: #fff;
+}
+.InnerDetail {
+  font-size: 16px;
+  color: red;
 }

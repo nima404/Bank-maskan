@@ -1,0 +1,29 @@
+.ant-form-item-label > label::after {
+  content: "" !important;
+}
+.ant-input {
+  width: 278px;
+}
+.ant-form-item-row {
+  float: left;
+}
+.ant-form-item {
+  margin-bottom: 10px;
+}
+.ant-input:disabled {
+  cursor: inherit;
+}
+.input-price .ant-input {
+  direction: ltr;
+  padding-left: 35px !important;
+}
+.input-price {
+  position: relative;
+}
+.currency {
+  position: absolute;
+  left: 4px;
+  z-index: 10;
+  top: 3px;
+  color: #9a9a9a;
+}

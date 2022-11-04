@@ -1,6 +1,9 @@
 .ant-form-item-label > label::after {
   content: "" !important;
 }
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 .ant-input {
   width: 278px;
 }
@@ -13,6 +16,9 @@
 .ant-input:disabled {
   cursor: inherit;
 }
-.ant-input[type="text"] {
+.ant-input[type="number"] {
+  direction: ltr;
+}
+.ant-input[type="password"] {
   direction: ltr;
 }

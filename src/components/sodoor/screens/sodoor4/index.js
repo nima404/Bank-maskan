@@ -1,15 +1,15 @@
 import React from 'react';
 import { InformationBox } from './InformationBox';
-import { NotificationText } from '../../NotificationText';
+import { NotificationText } from '../../../NotificationText';
 import { PrinterOutlined } from '@ant-design/icons';
 import { Button4 } from './Button4';
-import { SubmitButtonBox } from '../../SubmitButtonBox';
-import { Button } from '../../Button';
+import { SubmitButtonBoxN } from '../../SubmitButtonBoxN';
+import { ButtonN } from '../../ButtonN';
 import styles from './style.module.css';
 import maskan_icon from '../../../../asets/maskan_icon.jpg'
 import "./style.css";
 
-const Sodoor4 = ({ bankResponse = "failed" }) => (
+export const Sodoor4 = ({ bankResponse = "failed" }) => (
     <div className={styles.sodoor_container}>
         {
             bankResponse === 'success'
@@ -85,10 +85,10 @@ const Sodoor4 = ({ bankResponse = "failed" }) => (
         {
             bankResponse === "success"
                 ?
-                <SubmitButtonBox>
-                    <Button type="button" mode='submit' text='سفته PDF دریافت فایل'></Button>
-                    <Button type="button" text='صفخه اصلی'></Button>
-                </SubmitButtonBox>
+                <SubmitButtonBoxN>
+                    <ButtonN type="button" mode='submit' text='سفته PDF دریافت فایل'></ButtonN>
+                    <ButtonN type="button" text='صفخه اصلی'></ButtonN>
+                </SubmitButtonBoxN>
                 :
                 ""
         }

@@ -1,15 +1,15 @@
 import { FileTextOutlined, UserSwitchOutlined } from "@ant-design/icons";
 import { UserAddOutlined } from "@ant-design/icons";
-import { InputByLabel } from "../../../sodoor/InputByLabal";
-import { Button } from "../../../sodoor/Button";
-import { SubmitButtonBox } from "../../SubmitButtonBox";
+import { InputByLabel } from "../../../InputByLabal";
+import { ButtonN } from "../../ButtonN";
+import { SubmitButtonBoxN } from "../../SubmitButtonBoxN";
 import { DiffrentInputByLable } from "../../TextArea";
 import { InformationBoxN } from '../../InformationBoxN'
-import { InputGroupBox } from '../../InputGroupBox'
-import { NotificationText } from '../../NotificationText'
+import { InputGroupBoxN } from '../../InputGroupBoxN'
+import { NotificationText } from '../../../NotificationText'
 import styles from './style.module.css';
 import { Form, Input } from "antd";
-import { InputForPrice } from "../../InputForPrice";
+import { InputForPriceN } from "../../InputForPriceN";
 
 export function Sodoor1() {
     return (
@@ -21,41 +21,41 @@ export function Sodoor1() {
                 کاربرگرامی، لطفا ضمن انتخاب شماره حساب موردنظر خود، نسبت به تکمیل اطلاعات سفته و گیرنده آن اقدام نمایید.
             </NotificationText>
             <InformationBoxN title={" اطلاعت متعهد "} icon={<UserSwitchOutlined />} number={'1'}>
-                <InputGroupBox>
+                <InputGroupBoxN >
                     <InputByLabel label={" نام و نام خانوادگی "} disabled={true}></InputByLabel>
                     <InputByLabel label={" کدملی "} disabled={true}></InputByLabel>
                     <InputByLabel label={" شماره همراه "} disabled={true}></InputByLabel>
                     <InputByLabel status={"error"} mode={"dropDown"} label={" شماره حساب "} disabled={true}></InputByLabel>
-                </InputGroupBox>
-                <InputGroupBox>
+                </InputGroupBoxN>
+                <InputGroupBoxN>
                     <InputByLabel label={" کدپستی "}></InputByLabel>
                     <DiffrentInputByLable label={'آدرس'} rows={3}></DiffrentInputByLable>
-                </InputGroupBox>
+                </InputGroupBoxN>
             </InformationBoxN>
             <InformationBoxN icon={<FileTextOutlined />} title={"اطلاعات سفته"} number={'2'}>
-                <InputGroupBox>
-                    <InputForPrice label={'مبلغ تعهد'} ></InputForPrice>
+                <InputGroupBoxN >
+                    <InputForPriceN label={'مبلغ تعهد'} ></InputForPriceN>
                     <InputByLabel label={"تاریخ صدور"} />
-                </InputGroupBox>
-                <InputGroupBox>
+                </InputGroupBoxN>
+                <InputGroupBoxN >
                     <InputByLabel label={"محل پرداخت"} />
                     <InputByLabel label={"تاریخ سررسید"} />
-                </InputGroupBox>
+                </InputGroupBoxN>
             </InformationBoxN>
             <InformationBoxN title={" اطلاعت گیرنده "} icon={<UserAddOutlined />} number={'3'}>
-                <InputGroupBox>
+                <InputGroupBoxN >
                     <InputByLabel label={" نام و نام خانوادگی "}></InputByLabel>
                     <InputByLabel label={" کدملی "}></InputByLabel>
                     <InputByLabel label={" شماره همراه "}></InputByLabel>
-                </InputGroupBox>
-                <InputGroupBox>
+                </InputGroupBoxN>
+                <InputGroupBoxN >
                     <DiffrentInputByLable label={'توضیخات'} rows={3}></DiffrentInputByLable>
-                </InputGroupBox>
+                </InputGroupBoxN>
             </InformationBoxN>
-            <SubmitButtonBox>
-                <Button type="button" mode='submit' text='ارسال درخواست صدور سفته'></Button>
-                <Button type="button" text='مرحله قبل'></Button>
-            </SubmitButtonBox>
+            <SubmitButtonBoxN>
+                <ButtonN type="button" mode='submit' text='ارسال درخواست صدور سفته'></ButtonN>
+                <ButtonN type="button" text='مرحله قبل'></ButtonN>
+            </SubmitButtonBoxN>
         </div>
     )
 }
