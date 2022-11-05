@@ -1,7 +1,23 @@
+import axios from "axios";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getData } from "../../store/safteData/safteData.action";
 import { Card } from "./Card/index";
 import styles from "./style.module.css";
 
 export function Main() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // ?nationalNumber=0481301302
+    axios
+      .get(
+        "https://6358f6efff3d7bddb99528fa.mockapi.io/api/safteData/saftehDatas?nationalNumber=0481301302"
+      )
+      .then((res) => {
+        dispatch(getData(res.data[0]));
+      })
+      .catch((e) => console.log("e: ", e));
+  }, []);
   return (
     <div className={styles.card_container}>
       <Card

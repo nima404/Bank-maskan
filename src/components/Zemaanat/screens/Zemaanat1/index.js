@@ -9,8 +9,8 @@ import { Button } from "../../../Button";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
-import axios from "axios";
 import { Modal } from "antd";
+import { useSelector } from "react-redux";
 // ESTELAAM SAFTE
 export function Zemaanat1() {
   const history = useHistory();
@@ -19,7 +19,7 @@ export function Zemaanat1() {
   const [safteUniqueId, setSafeUniqueId] = useState("");
   const [disableInquiry, setDisableInquiry] = useState(true);
   const [recieving, setRecieving] = useState(false);
-  // const [user,setUser]=
+  const user = useSelector((state) => state.safteData.user);
   const error = () => {
     Modal.error({
       title: "خطا در دریافت اطلاعات",
@@ -40,27 +40,39 @@ export function Zemaanat1() {
     history.push("/");
   }
   function handleGetData() {
-    // 0481301302
-    console.log(
-      `https://6358f6efff3d7bddb99528fa.mockapi.io/api/safteData/saftehDatas?search=${nationalCode}`
-    );
+    // 0481301302 nationalNumber
+    // safte unique id 1234567891234533
     setRecieving(true);
-    axios
-      .get(
-        `https://6358f6efff3d7bddb99528fa.mockapi.io/api/safteData/saftehDatas?nationalNumber=${nationalCode}`
-      )
-      .then((res) => {
-        const userSafte = res.data[0].safte.find(
-          (item) => item.uniqueIdentifier === safteUniqueId
-        );
-        if (userSafte === undefined) {
-          throw new Error("not Found");
-        } else {
-          history.push("/zemaanat", { user: res.data[0] });
-        }
-      })
-      .catch(() => error())
-      .finally(() => setRecieving(false));
+    try {
+      const userSafte = user.safte.find(
+        (item) => item.uniqueIdentifier === safteUniqueId
+      );
+      if (userSafte === undefined) {
+        throw new Error("user did not Found");
+      } else {
+        history.push("/zemaanat", { safte: userSafte });
+      }
+    } catch (e) {
+      error();
+    } finally {
+      setRecieving(true);
+    }
+    // axios
+    //   .get(
+    //     `https://6358f6efff3d7bddb99528fa.mockapi.io/api/safteData/saftehDatas?nationalNumber=${nationalCode}`
+    //   )
+    //   .then((res) => {
+    //     const userSafte = res.data[0].safte.find(
+    //       (item) => item.uniqueIdentifier === safteUniqueId
+    //     );
+    //     if (userSafte === undefined) {
+    //       throw new Error("not Found");
+    //     } else {
+    //       history.push("/zemaanat", { user: res.data[0] });
+    //     }
+    //   })
+    //   .catch(() => error())
+    //   .finally(() => setRecieving(false));
   }
   return (
     <div className={styles.Zemaanat1_container}>
