@@ -1,6 +1,6 @@
 import { InformationBox } from "../../../InformationBox";
 import styles from "./styles.module.css";
-import "./style.css";
+// import "./style.css";
 import { FileSearchOutlined } from "@ant-design/icons";
 import { InputByLabel } from "../../../InputByLabal";
 import { InputGroupBox } from "../../../InputGroupBox";
