@@ -1,0 +1,51 @@
+.ant-modal {
+  direction: rtl;
+}
+.ant-modal-header {
+  position: absolute;
+  width: 560px;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+
+  background: #1d2939;
+  border-radius: 16px 16px 0px 0px;
+}
+.ant-modal-title {
+  color: #ffffff;
+}
+.ant-modal-body {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 560px;
+  height: 200px;
+  left: 0px;
+  top: 47px;
+
+  background: #ffffff;
+  border: 1px solid #a6a6a6;
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+.ant-modal-footer {
+  position: absolute;
+  padding: 10px 16px;
+  text-align: left;
+  background: #ffffff;
+  border-radius: 0px 0px 16px 16px;
+  width: 558px;
+  border: none;
+  height: 50px;
+  left: 1px;
+  top: 246px;
+}
+.ant-modal-close {
+  display: none;
+}
+.ant-form-item-row {
+  float: right;
+}
+.ant-btn-default {
+  color: #3a9bfb;
+  background: #d3e9ff;
+}

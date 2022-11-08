@@ -1,10 +1,10 @@
 import "./App.css";
-import { DeleteRequest } from "./components/DeleteRequest";
+import { ContinueProcess } from "./components/ContinueProcess/index";
 
 function App() {
   return (
     <>
-      <DeleteRequest />
+      <ContinueProcess />
     </>
   );
 }
