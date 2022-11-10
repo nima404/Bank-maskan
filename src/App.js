@@ -7,6 +7,7 @@ import { Main } from "./Pages/Main";
 import { Zemanat2 } from "./components/Zemaanat/screens/Zemanat2";
 
 
+
 function App() {
   return (
     <div className="App">
