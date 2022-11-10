@@ -43,6 +43,7 @@ export function Main() {
         description={"توضیحات ادامه با کد پیگیری"}
       />
       <Card
+      path={"/saftehayeman"}
         className={styles.card_style}
         title={"سفته های من"}
         description={"توضیحات سفته های من"}

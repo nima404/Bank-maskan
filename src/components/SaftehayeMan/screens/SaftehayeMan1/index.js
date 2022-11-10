@@ -7,8 +7,11 @@ import Style from "./style.module.css";
 import { Button } from "../../../Button";
 import { Details } from "../../../Details";
 import { NotificationText } from "../../../NotificationText";
+import { useSelector,useDispatch } from "react-redux";
 
 export default function SaftehayeMan1() {
+  const user = useSelector(state=>state.user)
+  console.log(user);
   return (
     <>
       <NotificationText type={"inform"}>
