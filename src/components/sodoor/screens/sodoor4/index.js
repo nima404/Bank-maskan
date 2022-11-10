@@ -1,12 +1,12 @@
 import React from 'react';
-import { InformationBox } from './InformationBox';
+import { InformationBox } from '../../../InformationBox';
 import { NotificationText } from '../../../NotificationText';
 import { PrinterOutlined } from '@ant-design/icons';
 import { Button4 } from './Button4';
 import { SubmitButtonBoxN } from '../../SubmitButtonBoxN';
 import { ButtonN } from '../../ButtonN';
 import styles from './style.module.css';
-import maskan_icon from '../../../../asets/maskan_icon.jpg'
+import maskan_icon from '../../../../assets/images/maskan_icon.jpg';
 import "./style.css";
 
 export const Sodoor4 = ({ bankResponse = "failed" }) => (

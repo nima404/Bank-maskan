@@ -3,6 +3,7 @@ import "./App.css";
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { Sodoor1 } from "./components/Sodoor/screens/Sodoor1";
+import Sodoor4 from "./components/Sodoor/screens/Sodoor4";
 import { Zemaanat1 } from "./components/Zemaanat/screens/Zemaanat1";
 import { Main } from "./Pages/Main";
 
