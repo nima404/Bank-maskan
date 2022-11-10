@@ -10,7 +10,6 @@ import SaftehayeMan1 from "./components/SaftehayeMan/screens/SaftehayeMan1";
 import { ContinueProcess } from "./Pages/ContinueProcess";
 import { DeleteRequest } from "./Pages/DeleteRequest";
 
-
 function App() {
   return (
     <div className="App">
@@ -24,15 +23,15 @@ function App() {
             <Route path="/zemaanat" component={Zemanat2} />
             <Route path="/continueProcess" component={ContinueProcess} />
             <Route path="/saftehaye-man" component={SaftehayeMan1} />
-            <Route path="/pardakht" component={Zemaanet3} />
             <Route path="/delete-request" component={DeleteRequest} />
             <Route path="/continue" component={ContinueProcess} />
+            {/* subPathes */}
+            <Route path="/pardakht" component={Zemaanet3} />
           </Switch>
         </Router>
       </div>
     </div>
   );
 }
-import { ContinueProcess } from "./Pages/ContinueProcess";
 
 export default App;
