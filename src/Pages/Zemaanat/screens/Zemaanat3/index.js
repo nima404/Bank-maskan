@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Maybe } from "../../../Maybe";
-import { NotificationText } from "../../../NotificationText";
+import { Maybe } from "../../../../components/Maybe";
+import { NotificationText } from "../../../../components/NotificationText";
 import styles from "./styles.module.css";
 import "./style.css";
 import { SafteInformaion } from "./components/SafteInformation";

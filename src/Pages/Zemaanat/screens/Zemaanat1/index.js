@@ -1,16 +1,23 @@
-import { InformationBox } from "../../../InformationBox";
+import { InformationBox } from "../../../../components/InformationBox";
 import styles from "./styles.module.css";
-// import "./style.css";
+import "./style.css";
 import { FileSearchOutlined } from "@ant-design/icons";
-import { InputByLabel } from "../../../InputByLabal";
-import { InputGroupBox } from "../../../InputGroupBox";
-import { SubmitButtonBox } from "../../../SubmitButtonBox";
-import { Button } from "../../../Button";
+import { InputByLabel } from "../../../../components/InputByLabal";
+import { InputGroupBox } from "../../../../components/InputGroupBox";
+import { SubmitButtonBox } from "../../../../components/SubmitButtonBox";
+import { Button } from "../../../../components/Button";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
 import { Modal } from "antd";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  editPathBackWard,
+  editPathForward,
+  setPath,
+} from "../../../../store/progress/progress.action";
+import { NotificationText } from "../../../../components/NotificationText";
+import { StepsBox } from "../../../../components/Steps";
 // ESTELAAM SAFTE
 export function Zemaanat1() {
   const history = useHistory();
@@ -19,7 +26,20 @@ export function Zemaanat1() {
   const [safteUniqueId, setSafeUniqueId] = useState("");
   const [disableInquiry, setDisableInquiry] = useState(true);
   const [recieving, setRecieving] = useState(false);
+  const dispatch = useDispatch();
+  const path = [
+    { title: "دریافت اطلاعات", status: "finish" },
+    { title: "احراز هویت", status: "finish" },
+    { title: "استعلام سفته", status: "process" },
+    { title: "ضمانت سفته", status: "wait" },
+    { title: "امضای سفته", status: "wait" },
+    { title: "پرداخت", status: "wait" },
+    { title: "دریافت سفته نهایی", status: "wait" },
+  ];
   const user = useSelector((state) => state.safteData.user);
+  useEffect(() => {
+    dispatch(setPath(path));
+  }, []);
   const error = () => {
     Modal.error({
       title: "خطا در دریافت اطلاعات",
@@ -37,11 +57,13 @@ export function Zemaanat1() {
     } else setDisableInquiry(true);
   }, [nationalCode, sanaCode, safteUniqueId]);
   function handleBack() {
+    dispatch(editPathBackWard({ title: "استعلام سفته", status: "wait" }));
     history.push("/");
   }
   function handleGetData() {
     // 0481301302 nationalNumber
     // safte unique id 1234567891234533
+    console.log(user);
     setRecieving(true);
     try {
       const userSafte = user.safte.find(
@@ -50,12 +72,13 @@ export function Zemaanat1() {
       if (userSafte === undefined) {
         throw new Error("user did not Found");
       } else {
+        dispatch(editPathForward({ title: "استعلام سفته" }));
         history.push("/zemaanat", { safte: userSafte });
       }
     } catch (e) {
       error();
     } finally {
-      setRecieving(true);
+      setRecieving(false);
     }
     // axios
     //   .get(
@@ -76,6 +99,15 @@ export function Zemaanat1() {
   }
   return (
     <div className={styles.Zemaanat1_container}>
+      <StepsBox stepsList={path} />
+      <NotificationText type={"success"}>
+        کاربر گرامی اطلاعات شما تا این لحظه ذخیره گردیده است. همچنین میتوانید با
+        استفاده از کد پیگیری، فرایند جاری را ادامه دهید. کد پیگیری:{"654978"}
+      </NotificationText>
+      <NotificationText type={"inform"}>
+        کاربر گرامی، لطفا ضمن انتخاب شماره حساب مورد نظر خود، نسبت به تکمیل
+        اطلاعات سفته و گیرنده آن اقدام نمایید.
+      </NotificationText>
       <InformationBox title={"استعلام سفته"} icon={<FileSearchOutlined />}>
         <InputGroupBox>
           <InputByLabel

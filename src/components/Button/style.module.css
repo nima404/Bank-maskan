@@ -1,5 +1,6 @@
 .submit_style,
-.submit_style:hover {
+.submit_style:hover,
+.submit_style:disabled {
   border: none;
   background: #3a9bfb;
   border-radius: 4px;
@@ -13,8 +14,8 @@
   background: #83c7ff !important;
 }
 .submit_style:disabled {
-  cursor: inherit;
-  background: #83c7ff;
+  cursor: inherit !important;
+  background: #83c7ff !important;
 }
 .cancle_style {
   background: white;
@@ -22,7 +23,7 @@
   border-radius: 4px;
   color: #3a9bfb;
   width: 84px;
-  height: 36px;
+  height: 36px !important;
   margin: 0 8px 0 0;
   cursor: pointer;
 }

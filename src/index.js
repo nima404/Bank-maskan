@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./store/index.store";
-import "../src/fonts/IRANSans.ttf";
+import "../src/assets/fonts/IRANSans.ttf";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

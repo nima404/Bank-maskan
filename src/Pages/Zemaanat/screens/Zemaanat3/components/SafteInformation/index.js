@@ -6,13 +6,13 @@ import {
 import { Modal } from "antd";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Button } from "../../../../../Button";
-import { InformationBox } from "../../../../../InformationBox";
-import { InputByLabel } from "../../../../../InputByLabal";
-import { InputForPrice } from "../../../../../InputForPrice";
-import { InputGroupBox } from "../../../../../InputGroupBox";
-import { Maybe } from "../../../../../Maybe";
-import { SubmitButtonBox } from "../../../../../SubmitButtonBox";
+import { Button } from "../../../../../../components/Button";
+import { InformationBox } from "../../../../../../components/InformationBox";
+import { InputByLabel } from "../../../../../../components/InputByLabal";
+import { InputForPrice } from "../../../../../../components/InputForPrice";
+import { InputGroupBox } from "../../../../../../components/InputGroupBox";
+import { Maybe } from "../../../../../../components/Maybe";
+import { SubmitButtonBox } from "../../../../../../components/SubmitButtonBox";
 import styles from "./styles.module.css";
 
 export function SafteInformaion({

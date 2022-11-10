@@ -1,0 +1,29 @@
+/* .delete_container {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.delete_container .submit_style {
+  border: none !important;
+  background: #3a9bfb !important;
+  border-radius: 4px !important;
+  color: white !important;
+  width: 84px;
+  height: 36px;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+}
+.delete_container .submit_style:disabled {
+  cursor: inherit;
+  background: #83c7ff;
+}
+.cancle_style {
+  background: #d3e9ff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: #3a9bfb !important;
+  width: 84px;
+  height: 36px;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+} */

@@ -1,6 +1,7 @@
 @font-face {
   font-family: "iranSans";
-  src: local("iranSans"), url("../src/fonts/IRANSans.ttf") format("truetype");
+  src: local("iranSans"),
+    url("../src/assets/fonts/IRANSans.ttf") format("truetype");
 }
 .App,
 .App-body {

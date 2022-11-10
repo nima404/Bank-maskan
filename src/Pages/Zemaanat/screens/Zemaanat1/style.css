@@ -1,4 +1,4 @@
-.ant-modal-confirm-body {
+.ant-modal-confirm-body * {
   direction: rtl;
 }
 .ant-modal-confirm .ant-modal-confirm-btns {
