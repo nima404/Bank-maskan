@@ -7,7 +7,7 @@
   border: 1px solid lightgray;
   padding: 10px 15px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   padding-bottom: 20px;
   margin-bottom: 25px;
@@ -15,4 +15,8 @@
 }
 .InformationBox_content {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
 }

@@ -1,5 +1,5 @@
 import { DatePicker, Space } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AlignInputbyLable from "../../../AlignInputByLable";
 import { InformationBox } from "../../../InformationBox";
 import { Checkbox } from "antd";
@@ -10,10 +10,15 @@ import { NotificationText } from "../../../NotificationText";
 import { useSelector,useDispatch } from "react-redux";
 
 export default function SaftehayeMan1() {
-  const user = useSelector(state=>state.user)
-  console.log(user);
+  const user = useSelector(state=>state.safteData.user)
+  const [filterUsers,setFilterUser]=useState('')
+  useEffect(()=>{
+    setFilterUser(user)
+  })
+  
   return (
     <>
+    <div className={Style.container}>
       <NotificationText type={"inform"}>
         کاربر گرامی، در این صفحه می‌توانید جزئیات مربوط به سفته‌های خود را
         مشاهده کنید. همچنین می‌توانید با توجه به نقش خود نسبت به سفته و وضعیت
@@ -30,8 +35,9 @@ export default function SaftehayeMan1() {
           </Space>
         </div>
         <Checkbox>عندالمطالبه</Checkbox>
-        <Button text={"جستجو"}></Button>
+        <Button handleClick={} text={"جستجو"}></Button>
       </InformationBox>
+    </div>
       <Details headerTitle={"صادر کننده سفته"} className={Style.Datail}>
         <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
       </Details>

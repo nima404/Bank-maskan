@@ -19,3 +19,8 @@
   padding: 20px 0 30px;
   text-align: center;
 }
+.container{
+  width: 90%;
+  /* text-align: center; */
+  margin: 0 auto;
+}

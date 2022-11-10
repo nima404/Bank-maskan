@@ -7,6 +7,7 @@ import EmptyText from "../EmptyText"
 import RectagleUserInformation from "../RectangleUserInformation"
 
 const index = () => {
+
   return (
     <details className={style.details}>
       <summary className={style.summary}>
