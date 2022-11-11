@@ -7,37 +7,39 @@ import Style from "./style.module.css";
 import { Button } from "../../../Button";
 import { Details } from "../../../Details";
 import { NotificationText } from "../../../NotificationText";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function SaftehayeMan1() {
-  const user = useSelector(state=>state.safteData.user)
-  const [filterUsers,setFilterUser]=useState('')
-  useEffect(()=>{
-    setFilterUser(user)
-  })
-  
+  const user = useSelector(state => state.safteData.user)
+
+  function search() {
+    let a =Object.keys(user).findIndex(node=>node=="fullName")
+    console.log(a)
+  }
+  search()
+
   return (
     <>
-    <div className={Style.container}>
-      <NotificationText type={"inform"}>
-        کاربر گرامی، در این صفحه می‌توانید جزئیات مربوط به سفته‌های خود را
-        مشاهده کنید. همچنین می‌توانید با توجه به نقش خود نسبت به سفته و وضعیت
-        آن، عملیات لازم را انجام دهید.
-      </NotificationText>
-      <InformationBox>
-        <AlignInputbyLable label={"نام گیرنده سفته"}></AlignInputbyLable>
-        <AlignInputbyLable label={"شناسه یکتای سفته"}></AlignInputbyLable>
-        <div>
-          <label className={Style.labelDate}>تاریخ سررسید سفته</label>
-          <Space direction="vertical" className={Style.date}>
-            <DatePicker />
-            <DatePicker />
-          </Space>
-        </div>
-        <Checkbox>عندالمطالبه</Checkbox>
-        <Button handleClick={} text={"جستجو"}></Button>
-      </InformationBox>
-    </div>
+      <div className={Style.container}>
+        <NotificationText type={"inform"}>
+          کاربر گرامی، در این صفحه می‌توانید جزئیات مربوط به سفته‌های خود را
+          مشاهده کنید. همچنین می‌توانید با توجه به نقش خود نسبت به سفته و وضعیت
+          آن، عملیات لازم را انجام دهید.
+        </NotificationText>
+        <InformationBox>
+          <AlignInputbyLable label={"نام گیرنده سفته"}></AlignInputbyLable>
+          <AlignInputbyLable label={"شناسه یکتای سفته"}></AlignInputbyLable>
+          <div>
+            <label className={Style.labelDate}>تاریخ سررسید سفته</label>
+            <Space direction="vertical" className={Style.date}>
+              <DatePicker />
+              <DatePicker />
+            </Space>
+          </div>
+          <Checkbox>عندالمطالبه</Checkbox>
+          <Button text={"جستجو"}></Button>
+        </InformationBox>
+      </div>
       <Details headerTitle={"صادر کننده سفته"} className={Style.Datail}>
         <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
       </Details>
