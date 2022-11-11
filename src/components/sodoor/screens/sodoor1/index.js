@@ -8,6 +8,7 @@ import { InformationBoxN } from "../../InformationBoxN";
 import { InputGroupBoxN } from "../../InputGroupBoxN";
 import { NotificationText } from "../../../NotificationText";
 import styles from "./style.module.css";
+import "./style.css"
 import { InputForPriceN } from "../../InputForPriceN";
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -197,7 +198,12 @@ export function Sodoor1() {
         }}
         okText="تایید"
         cancelText="ویرایش"
-      ></Modal>
+      >
+        <div className={styles.dark_div}><span>{newSafte.IssueDate}</span> <span> تاریخ صدور</span></div>
+        <div className={styles.light_div}><span>{newSafte.dateOfReceipt}</span> <span>تاریخ سررسید</span></div>
+        <div className={styles.dark_div}><span>{newSafte.paymentLocation}</span><span>محل پرداخت</span></div>
+        <div className={styles.light_div}><span>{newSafte.commitmentAmount}</span><span>مبلغ تعهد</span></div>
+      </Modal>
     </div>
   );
 }

@@ -1,0 +1,6 @@
+.ant-modal-header{
+    border-bottom: none;
+}
+.ant-modal-body{
+    border: none !important;
+}
