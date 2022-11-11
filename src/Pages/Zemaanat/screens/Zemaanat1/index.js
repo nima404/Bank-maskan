@@ -66,7 +66,7 @@ export function Zemaanat1() {
     console.log(user);
     setRecieving(true);
     try {
-      const userSafte = user.safte.find(
+      const userSafte = user.safteha.find(
         (item) => item.uniqueIdentifier === safteUniqueId
       );
       if (userSafte === undefined) {

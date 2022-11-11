@@ -13,7 +13,10 @@ import { DeleteRequest } from "./Pages/DeleteRequest";
 function App() {
   return (
     <div className="App">
+      {/* <Zemanat2 /> */}
+            
       <Sidebar />
+
       <div className="App-body">
         <Header />
         <Router>
@@ -25,7 +28,6 @@ function App() {
             <Route path="/saftehaye-man" component={SaftehayeMan1} />
             <Route path="/delete-request" component={DeleteRequest} />
             <Route path="/continue" component={ContinueProcess} />
-            {/* subPathes */}
             <Route path="/pardakht" component={Zemaanet3} />
           </Switch>
         </Router>
