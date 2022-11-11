@@ -8,6 +8,7 @@ export function Main() {
         className={styles.card_style}
         title={"صدور سفته"}
         description={"توضیحات صدور"}
+        path={"/sodor"}
       />
       <Card
         className={styles.card_style}

@@ -1,0 +1,13 @@
+.span_title{
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0 5px 0;
+    width: 30px;
+    height: 30px;
+    color: #91D5FF;
+    border-right: 1px solid #91D5FF;
+    border-bottom: 1px solid #91D5FF;
+    background-color: #E6F7FF;
+}
