@@ -9,12 +9,28 @@ import { Zemaanet3 } from "./Pages/Zemaanat/screens/Zemaanat3";
 import SaftehayeMan1 from "./components/SaftehayeMan/screens/SaftehayeMan1";
 import { ContinueProcess } from "./Pages/ContinueProcess";
 import { DeleteRequest } from "./Pages/DeleteRequest";
-
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import axios from "axios";
+import { getData } from "./store/safteData/safteData.action";
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // ?nationalNumber=0481301302
+    axios
+      .get(
+        "https://6358f6efff3d7bddb99528fa.mockapi.io/api/safteData/saftehDatas?nationalNumber=0481301302"
+      )
+      .then((res) => {
+        dispatch(getData(res.data[0]));
+        console.log(res.data[0]);
+      })
+      .catch((e) => console.log("e: ", e));
+  }, []);
   return (
     <div className="App">
       {/* <Zemanat2 /> */}
-            
+
       <Sidebar />
 
       <div className="App-body">
