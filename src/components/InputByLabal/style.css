@@ -21,6 +21,9 @@ input[type="number"] {
 .ant-input[type="number"] {
   direction: ltr;
 }
+.ant-input[type="date"] {
+  direction: ltr;
+}
 .ant-input[type="password"] {
   direction: ltr;
 }

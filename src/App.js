@@ -7,6 +7,8 @@ import { Zemanat2 } from "./Pages/Zemaanat/screens/Zemanat2";
 import { Zemaanat1 } from "./Pages/Zemaanat/screens/Zemaanat1";
 import { Zemaanet3 } from "./Pages/Zemaanat/screens/Zemaanat3";
 import SaftehayeMan1 from "./components/SaftehayeMan/screens/SaftehayeMan1";
+import { Sodoor1 } from "./components/sodoor/screens/sodoor1";
+import { Sodoor4 } from "./components/sodoor/screens/sodoor4";
 import { ContinueProcess } from "./Pages/ContinueProcess";
 import { DeleteRequest } from "./Pages/DeleteRequest";
 import { useDispatch } from "react-redux";
@@ -29,10 +31,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {/* <Zemanat2 /> */}
-
       <Sidebar />
-
       <div className="App-body">
         <Header />
         <Router>
@@ -44,7 +43,10 @@ function App() {
             <Route path="/saftehaye-man" component={SaftehayeMan1} />
             <Route path="/delete-request" component={DeleteRequest} />
             <Route path="/continue" component={ContinueProcess} />
-            <Route path="/pardakht" component={Zemaanet3} />
+            <Route path="/sodoor" component={Sodoor1} />
+            {/* sub pathes */}
+            <Route path="/sign_payment" component={Zemaanet3} />
+            <Route path="/payment" component={Sodoor4} />
           </Switch>
         </Router>
       </div>

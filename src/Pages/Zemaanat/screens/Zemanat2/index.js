@@ -1,6 +1,7 @@
+import { Modal } from "antd";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 import { Button } from "../../../../components/Button";
 import { Details } from "../../../../components/Details";
@@ -10,18 +11,20 @@ import { InputGroupBox } from "../../../../components/InputGroupBox";
 import { NotificationText } from "../../../../components/NotificationText";
 import { StepsBox } from "../../../../components/Steps";
 import { SubmitButtonBox } from "../../../../components/SubmitButtonBox";
+import { TitleModal } from "../../../DeleteRequest/components/VerifyModal/TitleModal";
 import styles from "./style.module.css";
 
 export const Zemanat2 = () => {
   const [trackingCode, setTrackingCode] = useState("654978");
   const path = useSelector((state) => state.progress.path);
   const user = useSelector((state) => state.safteData.user);
+  const [showModal, setShowModal] = useState(false);
+  const history = useHistory();
   console.log(user);
   const location = useLocation();
   const safte = location.state.safte;
 
   return (
-
     <div className={styles.Zemanat3_container}>
       <StepsBox stepsList={path} />
       <NotificationText type={"success"}>
@@ -38,16 +41,48 @@ export const Zemanat2 = () => {
         <InformationBox title={"اطلاعات صادر کننده"}>
           <div className={styles.input_section}>
             <InputGroupBox>
-              <InputByLabel label={"نوع شخص"} disabled={true} value={user.persontype} />
-              <InputByLabel label={"نام و نام خانوداگی"} disabled={true} value={user.fullName} />
-              <InputByLabel label={"شماره / شناسه ملی"} disabled={true} value={user.nationalNumber} />
-              <InputByLabel label={"شماره همراه"} disabled={true} value={user.phoneNumber} />
-              <InputByLabel label={"کد ثنا"} disabled={true} value={user.sanaCode} />
+              <InputByLabel
+                label={"نوع شخص"}
+                disabled={true}
+                value={user.persontype}
+              />
+              <InputByLabel
+                label={"نام و نام خانوداگی"}
+                disabled={true}
+                value={user.fullName}
+              />
+              <InputByLabel
+                label={"شماره / شناسه ملی"}
+                disabled={true}
+                value={user.nationalNumber}
+              />
+              <InputByLabel
+                label={"شماره همراه"}
+                disabled={true}
+                value={user.phoneNumber}
+              />
+              <InputByLabel
+                label={"کد ثنا"}
+                disabled={true}
+                value={user.sanaCode}
+              />
             </InputGroupBox>
             <InputGroupBox>
-              <InputByLabel label={"شماره حساب"} disabled={true} value={user.accountNumber} />
-              <InputByLabel label={"کد پستی"} disabled={true} value={user.postalCode} />
-              <InputByLabel label={"محل اقامت"} disabled={true} value={user.address} />
+              <InputByLabel
+                label={"شماره حساب"}
+                disabled={true}
+                value={user.accountNumber}
+              />
+              <InputByLabel
+                label={"کد پستی"}
+                disabled={true}
+                value={user.postalCode}
+              />
+              <InputByLabel
+                label={"محل اقامت"}
+                disabled={true}
+                value={user.address}
+              />
             </InputGroupBox>
           </div>
         </InformationBox>
@@ -55,16 +90,48 @@ export const Zemanat2 = () => {
         <InformationBox title={"اطلاعات سفته"}>
           <div className={styles.input_section}>
             <InputGroupBox>
-              <InputByLabel label={"مبلغ تعهد"} disabled={true} value={user.commitmentAmount} />
-              <InputByLabel label={"تاریخ و زمان صدور"} disabled={true} value={user.IssueDate} />
-              <InputByLabel label={"محل پرداخت"} disabled={true} value={user.placeOfPayment} />
-              <InputByLabel label={"شماره همراه"} disabled={true} value={user.address} />
+              <InputByLabel
+                label={"مبلغ تعهد"}
+                disabled={true}
+                value={user.commitmentAmount}
+              />
+              <InputByLabel
+                label={"تاریخ و زمان صدور"}
+                disabled={true}
+                value={user.IssueDate}
+              />
+              <InputByLabel
+                label={"محل پرداخت"}
+                disabled={true}
+                value={user.placeOfPayment}
+              />
+              <InputByLabel
+                label={"شماره همراه"}
+                disabled={true}
+                value={user.address}
+              />
             </InputGroupBox>
             <InputGroupBox>
-              <InputByLabel label={"نام عامل ثبت کننده"} disabled={true} value={user.agentName} />
-              <InputByLabel label={"شناسه پرداخت"} disabled={true} value={user.paymentCode} />
-              <InputByLabel label={"تاریخ سر رسید"} disabled={true} value={user.dateOfReceipt} />
-              <InputByLabel label={"وضعیت سفته"} disabled={true} value={user.condition} />
+              <InputByLabel
+                label={"نام عامل ثبت کننده"}
+                disabled={true}
+                value={user.agentName}
+              />
+              <InputByLabel
+                label={"شناسه پرداخت"}
+                disabled={true}
+                value={user.paymentCode}
+              />
+              <InputByLabel
+                label={"تاریخ سر رسید"}
+                disabled={true}
+                value={user.dateOfReceipt}
+              />
+              <InputByLabel
+                label={"وضعیت سفته"}
+                disabled={true}
+                value={user.condition}
+              />
             </InputGroupBox>
           </div>
         </InformationBox>
@@ -72,14 +139,38 @@ export const Zemanat2 = () => {
         <InformationBox title={"اطلاعات دریافت کننده"}>
           <div className={styles.input_section}>
             <InputGroupBox>
-              <InputByLabel label={"نوع شخص"} disabled={true} value={user.persontype} />
-              <InputByLabel label={"نام و نام خانوادگی"} disabled={true} value={user.fullName} />
-              <InputByLabel label={"شماره / شناسه ملی"} disabled={true} value={user.nationalNumber} />
-              <InputByLabel label={"شماره همراه"} disabled={true} value={user.phoneNumber} />
+              <InputByLabel
+                label={"نوع شخص"}
+                disabled={true}
+                value={user.persontype}
+              />
+              <InputByLabel
+                label={"نام و نام خانوادگی"}
+                disabled={true}
+                value={user.fullName}
+              />
+              <InputByLabel
+                label={"شماره / شناسه ملی"}
+                disabled={true}
+                value={user.nationalNumber}
+              />
+              <InputByLabel
+                label={"شماره همراه"}
+                disabled={true}
+                value={user.phoneNumber}
+              />
             </InputGroupBox>
             <InputGroupBox>
-              <InputByLabel label={"کد ثنا"} disabled={true} value={user.sanaCode} />
-              <InputByLabel label={"توضیحات"} disabled={true} value={user.scription} />
+              <InputByLabel
+                label={"کد ثنا"}
+                disabled={true}
+                value={user.sanaCode}
+              />
+              <InputByLabel
+                label={"توضیحات"}
+                disabled={true}
+                value={user.scription}
+              />
             </InputGroupBox>
           </div>
         </InformationBox>
@@ -94,11 +185,27 @@ export const Zemanat2 = () => {
       <InformationBox title={"اطلاعات ضامن جدید"}>
         <div className={styles.input_section}>
           <InputGroupBox>
-            <InputByLabel label={"نوع شخص ضامن"} disabled={true} value={user.persontype} />
-            <InputByLabel label={"نام و نام خانوداگی"} disabled={true} value={user.fullName} />
-            <InputByLabel label={"شماره / شناسه ملی"} disabled={true} value={user.nationalNumber} />
+            <InputByLabel
+              label={"نوع شخص ضامن"}
+              disabled={true}
+              value={user.persontype}
+            />
+            <InputByLabel
+              label={"نام و نام خانوداگی"}
+              disabled={true}
+              value={user.fullName}
+            />
+            <InputByLabel
+              label={"شماره / شناسه ملی"}
+              disabled={true}
+              value={user.nationalNumber}
+            />
             <InputByLabel label={"تاریخ تولد"} disabled={true} />
-            <InputByLabel label={"شماره همراه"} disabled={true} value={user.phoneNumber} />
+            <InputByLabel
+              label={"شماره همراه"}
+              disabled={true}
+              value={user.phoneNumber}
+            />
             <InputByLabel label={"کد ثنا"} disabled={true} />
           </InputGroupBox>
           <InputGroupBox>
@@ -116,9 +223,26 @@ export const Zemanat2 = () => {
       </InformationBox>
 
       <SubmitButtonBox>
-        <Button mode={"submit"} text="ارسال درخواست ضمانت نامه" />
+        <Button
+          mode={"submit"}
+          handleClick={() => setShowModal(true)}
+          text="ارسال درخواست ضمانت نامه"
+        />
         <Button mode={"cancle"} text="مرحله قبل" />
       </SubmitButtonBox>
+      <Modal
+        title={<TitleModal title={"تایید اطلاعات"} />}
+        open={showModal}
+        onOk={() => {
+          setShowModal(false);
+          history.push("./sign_payment", { safteInformation: safte });
+        }}
+        onCancel={() => {
+          setShowModal(false);
+        }}
+        okText="تایید"
+        cancelText="ویرایش"
+      ></Modal>
     </div>
   );
 };

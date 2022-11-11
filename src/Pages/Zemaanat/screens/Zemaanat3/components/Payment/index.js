@@ -1,6 +1,7 @@
 import { FileTextOutlined, UndoOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Button } from "../../../../../../components/Button";
 import { InformationBox } from "../../../../../../components/InformationBox";
 import { InputByLabel } from "../../../../../../components/InputByLabal";
@@ -19,6 +20,7 @@ export function Payment() {
   const [paymentError, setPaymentError] = useState(false);
   const [paymentLoading, setPaymentLoading] = useState(false);
   const [cardPassword, setCardPassword] = useState([""]);
+  const history = useHistory();
   function handlePayment() {
     if (!paymentError) {
       setPaymentLoading(true);
@@ -27,7 +29,7 @@ export function Payment() {
         setPaymentError(true);
       }, 3000);
     } else {
-      setPaymentError(false);
+      history.push("/payment");
     }
   }
   useEffect(() => {
@@ -108,7 +110,11 @@ export function Payment() {
 
       <SubmitButtonBox>
         {/* payment buttons */}
-        <Button type="primary" loading={paymentLoading} onClick={handlePayment}>
+        <Button
+          mode="submit"
+          loading={paymentLoading}
+          handleClick={handlePayment}
+        >
           {paymentError && <UndoOutlined />}
           پرداخت
         </Button>

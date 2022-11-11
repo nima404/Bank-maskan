@@ -7,6 +7,7 @@ export const Button = ({
   disabled,
   handleClick,
   loading,
+  children,
 }) => {
   return (
     <AntdButton
@@ -17,7 +18,7 @@ export const Button = ({
       type={mode === "submit" ? "primary" : "secondary"}
       className={mode === "submit" ? styles.submit_style : styles.cancle_style}
     >
-      {text}
+      {text === undefined ? children : text}
     </AntdButton>
   );
 };

@@ -15,3 +15,6 @@
   background: #83c7ff;
   color: white;
 }
+.card-inputs .ant-btn-secondary {
+  width: 100px;
+}

@@ -20,6 +20,7 @@ export function SafteInformaion({
   setsignError,
   setSigned,
   signError,
+  safte,
 }) {
   const [signLoading, setSignLoading] = useState(false);
   function handleSigned() {
@@ -41,14 +42,27 @@ export function SafteInformaion({
     <>
       <InformationBox icon={<FileTextOutlined />} title={"اطلاعات سفته"}>
         <InputGroupBox>
-          <InputByLabel disabled={true} label={"شناسه یکتا"} />
+          <InputByLabel
+            value={"1234567891234533"}
+            disabled={true}
+            label={"شناسه یکتا"}
+            type={"number"}
+          />
           <InputForPrice
             disabled={true}
-            value={"25000000"}
+            value={safte.commitmentAmount}
             label={"مبلغ تعهد"}
           />
-          <InputByLabel disabled={true} label={"تاریخ صدور"} />
-          <InputByLabel disabled={true} label={"تاریخ سررسید"} />
+          <InputByLabel
+            disabled={true}
+            label={"تاریخ صدور"}
+            value={safte.IssueDate}
+          />
+          <InputByLabel
+            disabled={true}
+            label={"تاریخ سررسید"}
+            value={safte.dateOfReceipt}
+          />
         </InputGroupBox>
         <Maybe condition={!signed}>
           <div className={styles.Zemaanet3__body__links}>
@@ -69,7 +83,11 @@ export function SafteInformaion({
       </Modal>
       <SubmitButtonBox>
         <Maybe condition={!signed}>
-          <Button type="primary" loading={signLoading} onClick={handleSigned}>
+          <Button
+            mode="submit"
+            loading={signLoading}
+            handleClick={handleSigned}
+          >
             {signError ? (
               <>
                 <UndoOutlined />
@@ -79,7 +97,7 @@ export function SafteInformaion({
               "امضای سفته"
             )}
           </Button>
-          <Button type="secondary">مرحله قبل</Button>
+          <Button type="cancel">مرحله قبل</Button>
         </Maybe>
       </SubmitButtonBox>
     </>
