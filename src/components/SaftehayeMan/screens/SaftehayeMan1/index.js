@@ -8,15 +8,22 @@ import { Button } from "../../../Button";
 import { Details } from "../../../Details";
 import { NotificationText } from "../../../NotificationText";
 import { useSelector, useDispatch } from "react-redux";
+import ShowUserInfromation from "../../components/ShowUsersInformation"
+
 
 export default function SaftehayeMan1() {
   const user = useSelector(state => state.safteData.user)
+  const [fullName, setFullName] = useState("")
+  const [uniqueIdentifier, setUniqueIdentifier] = useState("")
+  const [isTrue, setIsTrue] = useState(false)
 
-  function search() {
-    let a =Object.keys(user).findIndex(node=>node=="fullName")
-    console.log(a)
+
+  function filterUser() {
+    if (fullName === user?.fullName || uniqueIdentifier === user?.safteha?.uniqueIdentifier) {
+      setIsTrue(true)
+    }
   }
-  search()
+  console.log(isTrue);
 
   return (
     <>
@@ -27,8 +34,8 @@ export default function SaftehayeMan1() {
           آن، عملیات لازم را انجام دهید.
         </NotificationText>
         <InformationBox>
-          <AlignInputbyLable label={"نام گیرنده سفته"}></AlignInputbyLable>
-          <AlignInputbyLable label={"شناسه یکتای سفته"}></AlignInputbyLable>
+          <AlignInputbyLable label={"نام گیرنده سفته"} onChange={setFullName} ></AlignInputbyLable>
+          <AlignInputbyLable label={"شناسه یکتای سفته"} onChange={setUniqueIdentifier}></AlignInputbyLable>
           <div>
             <label className={Style.labelDate}>تاریخ سررسید سفته</label>
             <Space direction="vertical" className={Style.date}>
@@ -37,20 +44,20 @@ export default function SaftehayeMan1() {
             </Space>
           </div>
           <Checkbox>عندالمطالبه</Checkbox>
-          <Button text={"جستجو"}></Button>
+          <Button text={"جستجو"} handleClick={filterUser}></Button>
         </InformationBox>
       </div>
       <Details headerTitle={"صادر کننده سفته"} className={Style.Datail}>
-        <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
+        {isTrue ? <ShowUserInfromation></ShowUserInfromation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
       <Details headerTitle={"دارنده/دارنده جدید سفته"}>
-        <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
+        {isTrue ? <ShowUserInfromation></ShowUserInfromation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
       <Details headerTitle={"ظهر نویسی سفته"}>
-        <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
+        {isTrue ? <ShowUserInfromation></ShowUserInfromation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
       <Details headerTitle={"ضامن سفته"}>
-        <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
+        {isTrue ? <ShowUserInfromation></ShowUserInfromation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
     </>
   );
