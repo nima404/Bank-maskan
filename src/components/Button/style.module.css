@@ -5,7 +5,7 @@
   background: #3a9bfb;
   border-radius: 4px;
   color: white !important;
-  width: 188px;
+  min-width: 120px;
   height: 36px;
   margin: 0 8px 0 0;
   cursor: pointer;

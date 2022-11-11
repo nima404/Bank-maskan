@@ -48,7 +48,7 @@ export function Main() {
         className={styles.card_style}
         title={"سفته های من"}
         description={"توضیحات سفته های من"}
-        path={"/safte haye-man"}
+        path={"/saftehaye-man"}
       />
       <Card
         className={styles.card_style}

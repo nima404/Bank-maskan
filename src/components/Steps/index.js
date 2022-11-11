@@ -5,7 +5,7 @@
 //   UserOutlined,
 // } from "@ant-design/icons";
 import styles from "./style.module.css";
-
+import "./style.css";
 import { Steps } from "antd";
 export const StepsBox = ({ stepsList }) => {
   const { Step } = Steps;

@@ -6,20 +6,23 @@ import { InputByLabel } from "../../components/InputByLabal/index";
 import { InputGroupBox } from "../../components/InputGroupBox/index";
 import { SubmitButtonBox } from "../../components/SubmitButtonBox/index";
 
-// import { Button } from "./components/Button";
 import { useState } from "react";
 import { VerifyModal } from "./components/VerifyModal";
 import { Button } from "antd";
+import { useHistory } from "react-router-dom";
 export function ContinueProcess() {
   const [showModal, setShowModal] = useState(false);
-  const [code, setCode] = useState("12345");
-  console.log(showModal);
+  const [code, setCode] = useState("");
+  const history = useHistory();
   const handleClick = () => {
     setShowModal(true);
   };
   const handleCancel = () => {
     setShowModal(false);
   };
+  function handleBackWard() {
+    history.push("/");
+  }
   return (
     <div className={styles.delete_container}>
       <NotificationText type={"inform"}>
@@ -32,14 +35,22 @@ export function ContinueProcess() {
         icon={<CreditCardOutlined />}
       >
         <InputGroupBox>
-          <InputByLabel label={"کد پیگیری"} />
+          <InputByLabel
+            label={"کد پیگیری"}
+            value={code}
+            onChange={(value) => setCode(value)}
+            type={"number"}
+            maxLength={5}
+          />
         </InputGroupBox>
       </InformationBox>
       <SubmitButtonBox>
         <Button onClick={handleClick} className={styles.submit_style}>
           تایید
         </Button>
-        <Button className={styles.cancle_style}>بازگشت</Button>
+        <Button className={styles.cancle_style} onClick={handleBackWard}>
+          بازگشت
+        </Button>
       </SubmitButtonBox>
       <VerifyModal
         showModal={showModal}

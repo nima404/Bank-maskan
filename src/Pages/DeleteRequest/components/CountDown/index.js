@@ -1,5 +1,5 @@
-import { Button, Form, Input } from "antd";
-import { Col, Row, Statistic } from "antd";
+import { Button } from "antd";
+import { Statistic } from "antd";
 import React from "react";
 import { useState, useEffect } from "react";
 import { Maybe } from "../../../../components/Maybe";
@@ -23,7 +23,7 @@ export const CountDown = () => {
   return (
     <>
       <Maybe condition={resetCownt}>
-        <Button type="button" className="timer-btn">
+        <Button type="button" className="timer-btn" disabled={true}>
           <Countdown value={time} onFinish={onFinish} format="mm:ss" />
         </Button>
       </Maybe>

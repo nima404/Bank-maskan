@@ -10,7 +10,7 @@ import { NotificationText } from "../../../NotificationText";
 
 export default function SaftehayeMan1() {
   return (
-    <>
+    <div className={Style.SaftehayeMan1_container}>
       <NotificationText type={"inform"}>
         کاربر گرامی، در این صفحه می‌توانید جزئیات مربوط به سفته‌های خود را
         مشاهده کنید. همچنین می‌توانید با توجه به نقش خود نسبت به سفته و وضعیت
@@ -41,6 +41,6 @@ export default function SaftehayeMan1() {
       <Details headerTitle={"ضامن سفته"}>
         <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>
       </Details>
-    </>
+    </div>
   );
 }

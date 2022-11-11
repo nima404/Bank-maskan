@@ -1,12 +1,12 @@
 .timer-btn {
-  position: absolute;
-  width: 110px;
+  width: 95px;
   height: 32px;
-  left: 203px;
-  top: 131px;
   color: #3a9bfb;
   background: #d3e9ff;
   border-radius: 2px;
+  position: absolute;
+  /* top: 80px; */
+  left: 20px;
 }
 .ant-statistic-content {
   font-size: 14px;

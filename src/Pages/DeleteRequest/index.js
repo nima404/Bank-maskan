@@ -10,16 +10,20 @@ import { SubmitButtonBox } from "../../components/SubmitButtonBox/index";
 import { useState } from "react";
 import { VerifyModal } from "./components/VerifyModal";
 import { Button } from "antd";
+import { useHistory } from "react-router-dom";
 export function DeleteRequest() {
   const [showModal, setShowModal] = useState(false);
-  const [code, setCode] = useState("12345");
-  console.log(showModal);
+  const [code, setCode] = useState("");
+  const history = useHistory();
   const handleClick = () => {
     setShowModal(true);
   };
   const handleCancel = () => {
     setShowModal(false);
   };
+  function handleBackWard() {
+    history.push("/");
+  }
   return (
     <div className={styles.delete_container}>
       <NotificationText type={"inform"}>
@@ -29,14 +33,22 @@ export function DeleteRequest() {
       </NotificationText>
       <InformationBox title={"حذف درخواست"} icon={<CreditCardOutlined />}>
         <InputGroupBox>
-          <InputByLabel label={"کد پیگیری"} />
+          <InputByLabel
+            label={"کد پیگیری"}
+            value={code}
+            onChange={(value) => setCode(value)}
+            maxLength={5}
+            type={"number"}
+          />
         </InputGroupBox>
       </InformationBox>
       <SubmitButtonBox>
         <Button onClick={handleClick} className={styles.submit_style}>
           تایید
         </Button>
-        <Button className={styles.cancle_style}>بازگشت</Button>
+        <Button className={styles.cancle_style} onClick={handleBackWard}>
+          بازگشت
+        </Button>
       </SubmitButtonBox>
       <VerifyModal
         showModal={showModal}

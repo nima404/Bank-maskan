@@ -10,9 +10,9 @@ export function safteDataReducer(state = initialValue, action) {
         ...state,
         user: {
           ...state.user,
-          safte: {
-            ...state.user.safte,
-            guaranteers: [...state.user.safte.guaranteers, action.payload],
+          safteha: {
+            ...state.user.safteha,
+            guaranteers: [...state.user.safteha.guaranteers, action.payload],
           },
         },
       };

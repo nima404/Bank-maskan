@@ -1,5 +1,5 @@
-/* .delete_container {
-  width: 75%;
+.delete_container {
+  width: 95%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -17,7 +17,7 @@
   cursor: inherit;
   background: #83c7ff;
 }
-.cancle_style {
+.delete_container .cancle_style {
   background: #d3e9ff !important;
   border: none !important;
   border-radius: 4px !important;
@@ -26,4 +26,4 @@
   height: 36px;
   margin: 0 8px 0 0;
   cursor: pointer;
-} */
+}
