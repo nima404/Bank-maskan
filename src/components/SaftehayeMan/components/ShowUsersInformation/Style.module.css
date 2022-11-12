@@ -1,7 +1,7 @@
 /* .container{
     background-color: #fff;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -41,9 +41,12 @@
     justify-content: space-between;
     padding: 15px;
     direction: rtl;
+    width: 95%;
+    margin: 0 auto;
 }
 .details{
     margin-top: 15px;
+    border-radius: 10px;
 }
 
 /* .togle_button{
@@ -94,8 +97,9 @@
     background-color: #fff;
     margin: 0;
     border-radius: 0;
-    width: 100%;
+    width: 95%;
     padding: 10px;
+    margin: 0 auto;
 }
 .button_box{
     display: flex;
