@@ -2,7 +2,8 @@ import React from "react";
 import AlignInfoUsers from "../AlignInfoUsers";
 import style from "./style.module.css";
 
-const index = () => {
+const index = ({user}) => {
+
   return (
     <div className={style.container}>
       <div className={style.testClass}>
@@ -12,23 +13,23 @@ const index = () => {
         ></AlignInfoUsers>
         <AlignInfoUsers
           title={"شماره حساب"}
-          text={"۱۰۰۵۷۲۳۹۰۹"}
+          text={user.accountNumber}
         ></AlignInfoUsers>
         <AlignInfoUsers
           title={"شماره همراه"}
-          text={"۹۳۶۳۸۲۶۷۲۱"}
+          text={user.phoneNumber}
         ></AlignInfoUsers>
-        <AlignInfoUsers title={"نوع شخص"} text={"حقیقی"}></AlignInfoUsers>
-        <AlignInfoUsers title={"نام کامل"} text={"صادق کمالی"}></AlignInfoUsers>
+        <AlignInfoUsers title={"نوع شخص"} text={user.persontype}></AlignInfoUsers>
+        <AlignInfoUsers title={"نام کامل"} text={user.fullName}></AlignInfoUsers>
       </div>
       <div className={style.testClass}>
         <AlignInfoUsers
           title={"محل اقامت"}
-          text={"تهران، خیابان آزادی، کوچه محمدی، پلاک ۳"}
+          text={user.address}
         ></AlignInfoUsers>
         <AlignInfoUsers
           title={"شناسه پرداخت"}
-          text={"۹۹۰۲۳۷۳۸۹"}
+          text={user.postalCode}
         ></AlignInfoUsers>
         <AlignInfoUsers title={"کد ثنا"} text={"۷۰۱۶۷۴۴۰"}></AlignInfoUsers>
         <AlignInfoUsers

@@ -1,21 +1,39 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import style from "./Style.module.css";
 import DropDown from "../DropDown";
 import UserLine from "../UsersLine";
 import DetailInformation from "../DetailInformation";
-import EmptyText from "../EmptyText"
 import RectagleUserInformation from "../RectangleUserInformation"
+import EmptyText from "../EmptyText"
 
-const index = ({user}) => {
-  console.log(user);
+export const ShowUserInformation = ({ user }) => {
+
+  const [data, setData] = useState({
+    uniqueIdentifier: "",
+    dateOfReceipt: "",
+    agentName:"",
+  })
+
+  useEffect(() => {
+    user.safteha.map((node) => {
+      setData({
+        uniqueIdentifier: node.uniqueIdentifier,
+        dateOfReceipt: node.dateOfReceipt,
+        agentName:node.agentName,
+      })
+    })
+  }, [])
+
+  console.log("data: ", data);
+
   return (
     <details className={style.details}>
       <summary className={style.summary}>
         <div className={style.user}>
           <div className={style.users_column}>
             <div>
-              <p>{user?.safteha?.dateOfReceipt}</p>
-              <p>{user?.safteha?.uniqueIdentifier}</p>
+              <p>{data.dateOfReceipt}</p>
+              <p>{data.uniqueIdentifier}</p>
             </div>
             <div className={style.user_title}>
               <p>تاریخ سررسید</p>
@@ -24,7 +42,7 @@ const index = ({user}) => {
           </div>
           <div className={style.users_column}>
             <div>
-              <p>{user?.safteha?.agentName}</p>
+              <p>{data.agentName}</p>
               <p>۴۰.۰۰۰.۰۰۰ ریال</p>
             </div>
             <div className={style.user_title}>
@@ -41,21 +59,19 @@ const index = ({user}) => {
       <div className={style.container}>
         <div>
           <UserLine text={"اطلاعات صادرکننده"}></UserLine>
-          <DetailInformation></DetailInformation>
+          <DetailInformation user={user}></DetailInformation>
         </div>
-        <div>
+        {/* <div>
           <UserLine text={"اطلاعات دریافت‌کننده"}></UserLine>
-          <DetailInformation></DetailInformation>
-        </div>
+          <DetailInformation user={user}></DetailInformation>
+        </div> */}
         <div>
           <UserLine text={"اطلاعات ظهرنویسان"}></UserLine>
-          <RectagleUserInformation></RectagleUserInformation>
+          {/* <RectagleUserInformation></RectagleUserInformation> */}
           {/* if we dont have information for this part we would use this component */}
-          {/* <EmptyText text={"برای این سفته ظهرنویسی انجام نشده است."}></EmptyText> */}
+          <EmptyText text={"برای این سفته ظهرنویسی انجام نشده است"}></EmptyText>
         </div>
       </div>
     </details>
   );
 };
-
-export default index;

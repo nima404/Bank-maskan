@@ -8,7 +8,7 @@ import { Button } from "../../../Button";
 import { Details } from "../../../Details";
 import { NotificationText } from "../../../NotificationText";
 import { useSelector } from "react-redux";
-import ShowUsersInformation from "../../components/ShowUsersInformation"
+import { ShowUserInformation } from '../../components/ShowUsersInformation'
 
 export default function SaftehayeMan1() {
   const user = useSelector(state => state.safteData.user)
@@ -20,7 +20,6 @@ export default function SaftehayeMan1() {
       setIsTrue(true)
     }
   }
-  console.log(isTrue);
   return (
     <div className={Style.SaftehayeMan1_container}>
       <NotificationText type={"inform"}>
@@ -42,16 +41,16 @@ export default function SaftehayeMan1() {
         <Button text={"جستجو"} handleClick={checkuUser}></Button>
       </InformationBox>
       <Details headerTitle={"صادر کننده سفته"} className={Style.Datail}>
-      {isTrue ? <ShowUsersInformation user={user}></ShowUsersInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
+        {isTrue ? <ShowUserInformation user={user}></ShowUserInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
       <Details headerTitle={"دارنده/دارنده جدید سفته"}>
-      {isTrue ? <ShowUsersInformation user={user}></ShowUsersInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
+        {isTrue ? <ShowUserInformation user={user}></ShowUserInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
       <Details headerTitle={"ظهر نویسی سفته"}>
-      {isTrue ? <ShowUsersInformation user={user}></ShowUsersInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
+        {false ? <ShowUserInformation user={user}></ShowUserInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
       <Details headerTitle={"ضامن سفته"}>
-      {isTrue ? <ShowUsersInformation user={user}></ShowUsersInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
+        {false ? <ShowUserInformation user={user}></ShowUserInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
     </div>
   );
