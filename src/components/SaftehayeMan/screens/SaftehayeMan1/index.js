@@ -14,7 +14,7 @@ export default function SaftehayeMan1() {
   const user = useSelector(state => state.safteData.user)
   const [fullName, setFullName] = useState("")
   const [uniqueIdentifier, setUniqueIdentifier] = useState("")
-  const [isTrue, setIsTrue] = useState(true)
+  const [isTrue, setIsTrue] = useState(false)
   function checkuUser() {
     if (fullName === user?.fullName || uniqueIdentifier === user?.safteha?.uniqueIdentifier) {
       setIsTrue(true)

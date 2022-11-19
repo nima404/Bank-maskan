@@ -17,9 +17,9 @@ export const ShowUserInformation = ({ user }) => {
   useEffect(() => {
     user.safteha.map((node) => {
       setData({
-        uniqueIdentifier: node.uniqueIdentifier,
-        dateOfReceipt: node.dateOfReceipt,
-        agentName:node.agentName,
+        uniqueIdentifier: node?.uniqueIdentifier,
+        dateOfReceipt: node?.dateOfReceipt,
+        agentName:node?.agentName,
       })
     })
   }, [])
