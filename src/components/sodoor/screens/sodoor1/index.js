@@ -64,18 +64,18 @@ export function Sodoor1() {
         <InputGroupBoxN>
           <InputByLabel
             label={" نام و نام خانوادگی "}
-            disabled={true}
+            // disabled={true}
             value={user.fullName}
           ></InputByLabel>
           <InputByLabel
             value={user.nationalNumber}
             label={" کدملی "}
-            disabled={true}
+            // disabled={true}
           />
           <InputByLabel
             value={user.phoneNumber}
             label={" شماره همراه "}
-            disabled={true}
+            // disabled={true}
           />
           <InputByLabel
             status={"error"}
@@ -95,12 +95,14 @@ export function Sodoor1() {
             onChange={(value) => setPostalCode(value)}
             label={" کدپستی "}
             type={"number"}
+            value={"1234567890"}
           ></InputByLabel>
           <DiffrentInputByLable
             value={address}
             onChange={(value) => setAddress(value)}
             label={"آدرس"}
             rows={3}
+            value={"تهران شهر ری"}
           />
         </InputGroupBoxN>
       </InformationBoxN>

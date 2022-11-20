@@ -16,7 +16,7 @@
 .sidebar {
   position: relative !important;
   width: 15%;
-  /* height: 1920px; */
+  /* height: 100%; */
   right: 0px;
   top: 0px;
   direction: rtl;
