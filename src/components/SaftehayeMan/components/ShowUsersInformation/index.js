@@ -5,6 +5,7 @@ import UserLine from "../UsersLine";
 import DetailInformation from "../DetailInformation";
 import RectagleUserInformation from "../RectangleUserInformation"
 import EmptyText from "../EmptyText"
+import { digitsEnToFa } from "@persian-tools/persian-tools"; 
 
 export const ShowUserInformation = ({ user }) => {
 
@@ -33,7 +34,7 @@ export const ShowUserInformation = ({ user }) => {
           <div className={style.users_column}>
             <div>
               <p>{data.dateOfReceipt}</p>
-              <p>{data.uniqueIdentifier}</p>
+              <p>{digitsEnToFa(data.uniqueIdentifier)}</p>
             </div>
             <div className={style.user_title}>
               <p>تاریخ سررسید</p>

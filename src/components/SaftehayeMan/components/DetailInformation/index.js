@@ -1,6 +1,7 @@
 import React from "react";
 import AlignInfoUsers from "../AlignInfoUsers";
 import style from "./style.module.css";
+import { digitsEnToFa } from "@persian-tools/persian-tools";
 
 const index = ({user}) => {
 
@@ -13,11 +14,11 @@ const index = ({user}) => {
         ></AlignInfoUsers>
         <AlignInfoUsers
           title={"شماره حساب"}
-          text={user.accountNumber}
+          text={digitsEnToFa(user.accountNumber)}
         ></AlignInfoUsers>
         <AlignInfoUsers
           title={"شماره همراه"}
-          text={user.phoneNumber}
+          text={digitsEnToFa(user.phoneNumber)}
         ></AlignInfoUsers>
         <AlignInfoUsers title={"نوع شخص"} text={user.persontype}></AlignInfoUsers>
         <AlignInfoUsers title={"نام کامل"} text={user.fullName}></AlignInfoUsers>
@@ -29,7 +30,7 @@ const index = ({user}) => {
         ></AlignInfoUsers>
         <AlignInfoUsers
           title={"شناسه پرداخت"}
-          text={user.postalCode}
+          text={digitsEnToFa(user.postalCode)}
         ></AlignInfoUsers>
         <AlignInfoUsers title={"کد ثنا"} text={"۷۰۱۶۷۴۴۰"}></AlignInfoUsers>
         <AlignInfoUsers

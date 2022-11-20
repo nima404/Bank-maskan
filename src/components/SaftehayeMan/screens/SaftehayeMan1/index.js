@@ -12,14 +12,15 @@ import { ShowUserInformation } from '../../components/ShowUsersInformation'
 
 export default function SaftehayeMan1() {
   const user = useSelector(state => state.safteData.user)
-  const [fullName, setFullName] = useState("")
-  const [uniqueIdentifier, setUniqueIdentifier] = useState("")
+  const [fullName, setFullName] = useState("نیما تاجیک")
+  const [uniqueIdentifier, setUniqueIdentifier] = useState("1234567891234533")
   const [isTrue, setIsTrue] = useState(false)
   function checkuUser() {
     if (fullName === user?.fullName || uniqueIdentifier === user?.safteha?.uniqueIdentifier) {
       setIsTrue(true)
     }
   }
+  console.log(user);
   return (
     <div className={Style.SaftehayeMan1_container}>
       <NotificationText type={"inform"}>
@@ -28,13 +29,12 @@ export default function SaftehayeMan1() {
         آن، عملیات لازم را انجام دهید.
       </NotificationText>
       <InformationBox>
-        <AlignInputbyLable label={"نام گیرنده سفته"} onChange={setFullName}></AlignInputbyLable>
-        <AlignInputbyLable label={"شناسه یکتای سفته"} onChange={setUniqueIdentifier}></AlignInputbyLable>
+        <AlignInputbyLable label={"نام گیرنده سفته"} onChange={setFullName} value={fullName}></AlignInputbyLable>
+        <AlignInputbyLable label={"شناسه یکتای سفته"} onChange={setUniqueIdentifier} value={uniqueIdentifier}></AlignInputbyLable>
         <div>
           <label className={Style.labelDate}>تاریخ سررسید سفته</label>
           <Space direction="vertical" className={Style.date}>
-            <DatePicker />
-            <DatePicker />
+            <DatePicker/>
           </Space>
         </div>
         <Checkbox>عندالمطالبه</Checkbox>
