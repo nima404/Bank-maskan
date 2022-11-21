@@ -9,7 +9,6 @@ import { InformationBox } from "../../../../components/InformationBox";
 import { InputByLabel } from "../../../../components/InputByLabal";
 import { InputGroupBox } from "../../../../components/InputGroupBox";
 import { NotificationText } from "../../../../components/NotificationText";
-import { StepsBox } from "../../../../components/Steps";
 import { SubmitButtonBox } from "../../../../components/SubmitButtonBox";
 import { TitleModal } from "../../../DeleteRequest/components/VerifyModal/TitleModal";
 import styles from "./style.module.css";
@@ -26,7 +25,6 @@ export const Zemanat2 = () => {
 
   return (
     <div className={styles.Zemanat3_container}>
-      <StepsBox stepsList={path} />
       <NotificationText type={"success"}>
         کاربر گرامی اطلاعات شما تا این لحظه ذخیره گردیده است. همچنین میتوانید با
         استفاده از کد پیگیری، فرایند جاری را ادامه دهید. کد پیگیری:{" "}
@@ -242,7 +240,31 @@ export const Zemanat2 = () => {
         }}
         okText="تایید"
         cancelText="ویرایش"
-      ></Modal>
+      >
+        <div className={styles.modalBody_parent}>
+          <p>نام و نام خانوداگی</p>
+          <p>{user.fullName}</p>
+        </div>
+
+        <div className={styles.modalBody_parent}>
+          <p>کد ملی</p>
+          <p>{user.nationalNumber}</p>
+        </div>
+
+        <div className={styles.modalBody_parent}>
+          <p>شماره همراه</p>
+          <p>{user.phoneNumber}</p>
+        </div>
+
+        <div className={styles.modalBody_parent}>
+          <p>آدرس</p>
+          <p>{user.address}</p>
+        </div>
+      </Modal>
+
+      {
+        console.log("user: " , user)
+      }
     </div>
   );
 };

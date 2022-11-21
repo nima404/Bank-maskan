@@ -52,6 +52,15 @@ export default function SaftehayeMan1() {
       <Details headerTitle={"ضامن سفته"}>
         {false ? <ShowUserInformation user={user}></ShowUserInformation> : <p className={Style.InnerDetail}> سفته‌ای جهت نمایش وجود ندارد</p>}
       </Details>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 }

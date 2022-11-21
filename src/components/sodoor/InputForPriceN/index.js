@@ -3,7 +3,7 @@ import "antd/dist/antd.css";
 import { useState } from "react";
 import "./style.css";
 export function InputForPriceN({ label, disabled, value = 0, onChange }) {
-  const [priceValue, setPriceValue] = useState("");
+  const [priceValue, setPriceValue] = useState(value);
   const formatChanger = (num) => {
     // return new Intl.NumberFormat("fa-Ir").format(num);
     return num;

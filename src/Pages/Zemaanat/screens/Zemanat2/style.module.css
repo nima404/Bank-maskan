@@ -9,3 +9,12 @@
   justify-content: space-around;
   align-items: flex-start;
 }
+
+
+.modalBody_parent{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -5,7 +5,6 @@ import styles from "./style.module.css";
 import { InputByLabel } from "../../components/InputByLabal/index";
 import { InputGroupBox } from "../../components/InputGroupBox/index";
 import { SubmitButtonBox } from "../../components/SubmitButtonBox/index";
-
 import { useState } from "react";
 import { VerifyModal } from "./components/VerifyModal";
 import { Button } from "antd";
@@ -58,6 +57,24 @@ export function ContinueProcess() {
         Title={"کد تایید"}
         code={code}
       />
+
+<br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

@@ -17,7 +17,6 @@ import {
   setPath,
 } from "../../../../store/progress/progress.action";
 import { NotificationText } from "../../../../components/NotificationText";
-import { StepsBox } from "../../../../components/Steps";
 // ESTELAAM SAFTE
 export function Zemaanat1() {
   const history = useHistory();
@@ -63,6 +62,7 @@ export function Zemaanat1() {
   function handleGetData() {
     // 0481301302 nationalNumber
     // safte unique id 1234567891234533
+    //1234567891234533 
     console.log(user);
     setRecieving(true);
     try {
@@ -99,7 +99,6 @@ export function Zemaanat1() {
   }
   return (
     <div className={styles.Zemaanat1_container}>
-      <StepsBox stepsList={path} />
       <NotificationText type={"success"}>
         کاربر گرامی اطلاعات شما تا این لحظه ذخیره گردیده است. همچنین میتوانید با
         استفاده از کد پیگیری، فرایند جاری را ادامه دهید. کد پیگیری:{"654978"}
@@ -151,6 +150,17 @@ export function Zemaanat1() {
           handleClick={handleBack}
         />
       </SubmitButtonBox>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 }

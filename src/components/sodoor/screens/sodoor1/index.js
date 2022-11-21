@@ -15,6 +15,7 @@ import { useState } from "react";
 import { Modal } from "antd";
 import { useHistory } from "react-router-dom";
 import { TitleModal } from "../../../../Pages/DeleteRequest/components/VerifyModal/TitleModal";
+// import { useEffect } from "react";
 
 export function Sodoor1() {
   const user = useSelector((state) => state.safteData.user);
@@ -22,18 +23,35 @@ export function Sodoor1() {
   const [accountNumber, setAccountNumber] = useState("");
   const [address, setAddress] = useState("");
   const [newSafte, setNewSafte] = useState({
-    commitmentAmount: "",
+    commitmentAmount: user?.safteha.map(node=>node.commitmentAmount),
     IssueDate: "",
     dateOfReceipt: "",
-    paymentLocation: "",
+    paymentLocation: user?.safteha.map(node=>node.placeOfPayment),
     receiver: {
-      fullName: "",
-      nationalNumber: "",
-      phoneNumber: "",
+      fullName: user?.safteha.map(node=>node.receiver.fullName),
+      nationalNumber: user?.safteha.map(node=>node.receiver.nationalNumber),
+      phoneNumber: user?.safteha.map(node=>node.receiver.phoneNumber),
       descriptions: "",
     },
   });
-  console.log(newSafte);
+  // useEffect(()=>{
+  //   user?.safteha.map(node=>{
+  //     setNewSafte({
+  //       commitmentAmount: node.commitmentAmount,
+  //       IssueDate: "",
+  //       dateOfReceipt: "",
+  //       paymentLocation: "",
+  //       receiver: {
+  //         fullName: "",
+  //         nationalNumber: "",
+  //         phoneNumber: "",
+  //         descriptions: "",
+  //       },
+  //     })
+  //   })
+  // },[])
+  //   console.log(newSafte);
+
   const [showModal, setShowModal] = useState(false);
   const history = useHistory();
   function handleChangeNewSafte(obj) {
@@ -91,18 +109,16 @@ export function Sodoor1() {
         <InputGroupBoxN>
           <InputByLabel
             maxLength={10}
-            value={postalCode}
             onChange={(value) => setPostalCode(value)}
             label={" کدپستی "}
             type={"number"}
-            value={"1234567890"}
+            value={user.postalCode}
           ></InputByLabel>
           <DiffrentInputByLable
-            value={address}
             onChange={(value) => setAddress(value)}
             label={"آدرس"}
             rows={3}
-            value={"تهران شهر ری"}
+            value={user.address}
           />
         </InputGroupBoxN>
       </InformationBoxN>
@@ -119,12 +135,12 @@ export function Sodoor1() {
               handleChangeNewSafte({ commitmentAmount: value })
             }
           />
-          <InputByLabel
+          {/* <InputByLabel
             label={"تاریخ صدور"}
             type={"date"}
             value={newSafte.IssueDate}
             onChange={(value) => handleChangeNewSafte({ IssueDate: value })}
-          />
+          /> */}
         </InputGroupBoxN>
         <InputGroupBoxN>
           <InputByLabel
@@ -134,12 +150,12 @@ export function Sodoor1() {
               handleChangeNewSafte({ paymentLocation: value })
             }
           />
-          <InputByLabel
+          {/* <InputByLabel
             label={"تاریخ سررسید"}
             type={"date"}
             value={newSafte.dateOfReceipt}
-            onChange={(value) => handleChangeNewSafte({ dateOfReceipt: value })}
-          />
+            // onChange={(value) => handleChangeNewSafte({ dateOfReceipt: value })}
+          /> */}
         </InputGroupBoxN>
       </InformationBoxN>
       <InformationBoxN
@@ -201,8 +217,8 @@ export function Sodoor1() {
         okText="تایید"
         cancelText="ویرایش"
       >
-        <div className={styles.dark_div}><span>{newSafte.IssueDate}</span> <span> تاریخ صدور</span></div>
-        <div className={styles.light_div}><span>{newSafte.dateOfReceipt}</span> <span>تاریخ سررسید</span></div>
+        {/* <div className={styles.dark_div}><span>{newSafte.IssueDate}</span> <span> تاریخ صدور</span></div>
+        <div className={styles.light_div}><span>{newSafte.dateOfReceipt}</span> <span>تاریخ سررسید</span></div> */}
         <div className={styles.dark_div}><span>{newSafte.paymentLocation}</span><span>محل پرداخت</span></div>
         <div className={styles.light_div}><span>{newSafte.commitmentAmount}</span><span>مبلغ تعهد</span></div>
       </Modal>
