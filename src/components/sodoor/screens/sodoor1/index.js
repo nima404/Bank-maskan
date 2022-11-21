@@ -51,7 +51,6 @@ export function Sodoor1() {
   //   })
   // },[])
   //   console.log(newSafte);
-
   const [showModal, setShowModal] = useState(false);
   const history = useHistory();
   function handleChangeNewSafte(obj) {
@@ -63,6 +62,9 @@ export function Sodoor1() {
     setNewSafte((prev) => {
       return { ...prev, receiver: { ...prev.receiver, ...obj } };
     });
+  }
+  function back() {
+    history.push('/')
   }
   return (
     <div className={styles.sodoor_container}>
@@ -202,7 +204,7 @@ export function Sodoor1() {
           text="ارسال درخواست صدور سفته"
           handleClick={() => setShowModal(true)}
         ></ButtonN>
-        <ButtonN type="button" text="مرحله قبل"></ButtonN>
+        <ButtonN type="button" text="مرحله قبل" handleClick={back} ></ButtonN>
       </SubmitButtonBoxN>
       <Modal
         title={<TitleModal title={"تایید اطلاعات"} />}

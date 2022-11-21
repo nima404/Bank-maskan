@@ -41,44 +41,44 @@ export const Zemanat2 = () => {
             <InputGroupBox>
               <InputByLabel
                 label={"نوع شخص"}
-                disabled={true}
+                // disabled={true}
                 value={user.persontype}
               />
               <InputByLabel
                 label={"نام و نام خانوداگی"}
-                disabled={true}
+                // disabled={true}
                 value={user.fullName}
               />
               <InputByLabel
                 label={"شماره / شناسه ملی"}
-                disabled={true}
+                // disabled={true}
                 value={user.nationalNumber}
               />
               <InputByLabel
                 label={"شماره همراه"}
-                disabled={true}
+                // disabled={true}
                 value={user.phoneNumber}
               />
               <InputByLabel
                 label={"کد ثنا"}
-                disabled={true}
+                // disabled={true}
                 value={user.sanaCode}
               />
             </InputGroupBox>
             <InputGroupBox>
               <InputByLabel
                 label={"شماره حساب"}
-                disabled={true}
+                // disabled={true}
                 value={user.accountNumber}
               />
               <InputByLabel
                 label={"کد پستی"}
-                disabled={true}
+                // disabled={true}
                 value={user.postalCode}
               />
               <InputByLabel
                 label={"محل اقامت"}
-                disabled={true}
+                // disabled={true}
                 value={user.address}
               />
             </InputGroupBox>
@@ -90,44 +90,44 @@ export const Zemanat2 = () => {
             <InputGroupBox>
               <InputByLabel
                 label={"مبلغ تعهد"}
-                disabled={true}
+                // disabled={true}
                 value={user.commitmentAmount}
               />
               <InputByLabel
                 label={"تاریخ و زمان صدور"}
-                disabled={true}
+                // disabled={true}
                 value={user.IssueDate}
               />
               <InputByLabel
                 label={"محل پرداخت"}
-                disabled={true}
+                // disabled={true}
                 value={user.placeOfPayment}
               />
               <InputByLabel
                 label={"شماره همراه"}
-                disabled={true}
+                // disabled={true}
                 value={user.address}
               />
             </InputGroupBox>
             <InputGroupBox>
               <InputByLabel
                 label={"نام عامل ثبت کننده"}
-                disabled={true}
+                // disabled={true}
                 value={user.agentName}
               />
               <InputByLabel
                 label={"شناسه پرداخت"}
-                disabled={true}
+                // disabled={true}
                 value={user.paymentCode}
               />
               <InputByLabel
                 label={"تاریخ سر رسید"}
-                disabled={true}
+                // disabled={true}
                 value={user.dateOfReceipt}
               />
               <InputByLabel
                 label={"وضعیت سفته"}
-                disabled={true}
+                // disabled={true}
                 value={user.condition}
               />
             </InputGroupBox>
@@ -139,34 +139,34 @@ export const Zemanat2 = () => {
             <InputGroupBox>
               <InputByLabel
                 label={"نوع شخص"}
-                disabled={true}
+                // disabled={true}
                 value={user.persontype}
               />
               <InputByLabel
                 label={"نام و نام خانوادگی"}
-                disabled={true}
+                // disabled={true}
                 value={user.fullName}
               />
               <InputByLabel
                 label={"شماره / شناسه ملی"}
-                disabled={true}
+                // disabled={true}
                 value={user.nationalNumber}
               />
               <InputByLabel
                 label={"شماره همراه"}
-                disabled={true}
+                // disabled={true}
                 value={user.phoneNumber}
               />
             </InputGroupBox>
             <InputGroupBox>
               <InputByLabel
                 label={"کد ثنا"}
-                disabled={true}
+                // disabled={true}
                 value={user.sanaCode}
               />
               <InputByLabel
                 label={"توضیحات"}
-                disabled={true}
+                // disabled={true}
                 value={user.scription}
               />
             </InputGroupBox>
@@ -185,26 +185,26 @@ export const Zemanat2 = () => {
           <InputGroupBox>
             <InputByLabel
               label={"نوع شخص ضامن"}
-              disabled={true}
+              // disabled={true}
               value={user.persontype}
             />
             <InputByLabel
               label={"نام و نام خانوداگی"}
-              disabled={true}
+              // disabled={true}
               value={user.fullName}
             />
             <InputByLabel
               label={"شماره / شناسه ملی"}
-              disabled={true}
+              // disabled={true}
               value={user.nationalNumber}
             />
-            <InputByLabel label={"تاریخ تولد"} disabled={true} />
+            {/* <InputByLabel label={"تاریخ تولد"} disabled={true} /> */}
             <InputByLabel
               label={"شماره همراه"}
-              disabled={true}
+              // disabled={true}
               value={user.phoneNumber}
             />
-            <InputByLabel label={"کد ثنا"} disabled={true} />
+            {/* <InputByLabel label={"کد ثنا"} disabled={true} /> */}
           </InputGroupBox>
           <InputGroupBox>
             <InputByLabel

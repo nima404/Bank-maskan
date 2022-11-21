@@ -49,3 +49,12 @@
 .ant-menu-title-content {
   margin-left: 0 !important;
 }
+
+
+.ant-menu-item:hover{
+  cursor: no-drop !important;
+}
+
+.ant-menu-item-selected:hover{
+  cursor: auto !important;
+}
