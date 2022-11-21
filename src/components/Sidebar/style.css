@@ -16,7 +16,8 @@
 .sidebar {
   position: relative !important;
   width: 15%;
-  /* height: 1920px; */
+
+  height: 789px;
   right: 0px;
   top: 0px;
   direction: rtl;
@@ -39,7 +40,7 @@
   justify-content: center;
 }
 .ant-menu-item-selected {
-  background: #f4ab4d;
+  background: #f4ab4d !important;
 }
 .ant-menu-inline > .ant-menu-item {
   height: 70px !important;

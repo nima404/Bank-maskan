@@ -45,8 +45,8 @@ export function Sidebar() {
       </div>
       <Menu
         theme="dark"
-        defaultOpenKeys={["sub1"]}
-        defaultSelectedKeys={["1"]}
+        defaultOpenKeys={["sub3"]}
+        selectedKeys={["sub3"]}
         mode="inline"
         items={items}
       />
